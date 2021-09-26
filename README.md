@@ -3,4 +3,4 @@ My solutions for the exercises in the book "Accelerated C++" by Andrew Koenig an
 
 Solutions for each chapter can be found on their respective folder.
 
-Note: These are my solutions and they might be incorrect, use them with caution.
+Note: These are my solutions and they might be incorrect, so use them with caution.
