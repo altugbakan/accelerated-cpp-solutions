@@ -2,7 +2,7 @@
 
 ### Q0: Compile and run the `Hello, world!` program.
 
-The code can be found on *q0.cpp*. You have to build it using a compiler you are using (for example: g++). After you have built the program, run the output file (Double click the .exe file if you are using Windows).
+The code can be found on *q00.cpp*. You have to build it using a compiler you are using (for example: g++). After you have built the program, run the output file (Double click the .exe file if you are using Windows).
 
 ### Q1: What does the following statement do?
 ```
@@ -14,13 +14,13 @@ This statement yields an int with a value of 7. Note that this value is not save
 ```
 This (") is a quote, and this (\) is a backslash.
 ```
-The solution can be found in *2.cpp*. The trick here is using escape characters such as **\\"** and **\\\\** to print characters that might otherwise break the string.
+The solution can be found in *q02.cpp*. The trick here is using escape characters such as **\\"** and **\\\\** to print characters that might otherwise break the string.
 
 ### Q3: The string literal "`\t`" represents a tab character; different C++ implementations display tabs in different ways. Experiment with your implementation to learn how it treats tabs.
-A sample program for this question can be found in *q3.cpp*. It seems g++ uses 8 spaces for a tab. You will see that the output has 7 spaces between the parentheses, as the closing parenthesis is put on the 8<sup>th</sup> space.
+A sample program for this question can be found in *q03.cpp*. It seems g++ uses 8 spaces for a tab. You will see that the output has 7 spaces between the parentheses, as the closing parenthesis is put on the 8<sup>th</sup> space.
 
 ### Q4: Write a program that, when run, writes the `Hello, world!` program as its output.
-The solution can be found in *q4.cpp*. Four spaces are used instead of tabs to make the output similar to the original code written in VSCode.
+The solution can be found in *q04.cpp*. Four spaces are used instead of tabs to make the output similar to the original code written in VSCode.
 
 ### Q5: Is this a valid program? Why or why not?
 ```
@@ -35,7 +35,7 @@ This is not a valid program as the curly braces which should be present after th
 
 int main() {{{{{{ std::cout << "Hello, world!" << std::endl; }}}}}}
 ```
-This is a valid program, as the curly brackets can be stacked indefinitely. One pair of curly brackets was enough but more can be used for other matters such as limiting the scope of a variable. The unnecessary brackets were probably ignored by the compiler. The code is present in *q6.cpp* to experiment.
+This is a valid program, as the curly brackets can be stacked indefinitely. One pair of curly brackets was enough but more can be used for other matters such as limiting the scope of a variable. The unnecessary brackets were probably ignored by the compiler. The code is present in *q06.cpp* to experiment.
 
 ### Q7: What about this one?
 ```
@@ -64,10 +64,10 @@ int main()
     return 0;
 }
 ```
-This is a valid program. The code can be found in *q8.cpp* to experiment.
+This is a valid program. The code can be found in *q08.cpp* to experiment.
 
 ### Q9: What is the shortest valid program?
-The shortest valid program is `main(){}`. The code is in *q9.cpp* to experiment.
+The shortest valid program is `main(){}`. The code is in *q09.cpp* to experiment.
 
 ### Q10: Rewrite the `Hello, world!` program so that a newline occurs everywhere that whitespace is allowed in the program.
 The program can be found in *q10.cpp*.
