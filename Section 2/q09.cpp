@@ -16,4 +16,6 @@ int main()
         std::cout << num1;
     else
         std::cout << num2;
+
+    return 0;
 }

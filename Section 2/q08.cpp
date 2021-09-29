@@ -9,4 +9,6 @@ int main()
         product *= i;
     }
     std::cout << product << std::endl;
+
+    return 0;
 }

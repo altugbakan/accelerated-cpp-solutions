@@ -35,4 +35,6 @@ int main()
         cout << string(length, '*');
         cout << string(spaces, ' ') << endl;
     }
+
+    return 0;
 }
