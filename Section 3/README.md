@@ -13,7 +13,7 @@ The program can be found in *q02.cpp*. It sorts the input numbers and prints eac
 The program can be found in *q03.cpp*. It stores the input words and the amount of appearances in separate `vector`s with same indices for word and its respective count.
 
 ### Q4: Write a program to report the length of the longest and the shortest `string` in its input.
-The program can be found in *q04.cpp*. It stores the lengths of the `string`s from the input into a `vector`, then sorts the `vector` to find the shortest and longest lengths. The shortest length is the first element and the longest length is the last element in the vector.
+The program can be found in *q04.cpp*. It stores the lengths of the `string`s from the input into a `vector`, then sorts the `vector` to find the shortest and longest lengths. The shortest length is the first element, and the longest length is the last element of the vector.
 
 ### Q5: Write a program that will keep track of grades for several students at once. The program could keep two `vector`s in sync: The first should hold the students' names, and the second the final grades that can be computed as input is read. For now, you should assume a fixed number of homework grades. We'll see in §4.1.3/56 how to handle a variable number of grades intermixed with student names.
 
