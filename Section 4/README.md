@@ -1,6 +1,7 @@
 ## Questions and Solutions
 
 ### Q0: Compile, execute, and test the programs in this chapter.
+The programs in this chapter are compiled and tested. The programs can be found in the book.
 
 ### Q1: We noted in §4.2.3/65 that it is essential that the argument types in a call to `max` match exactly. Will the following code work? If there is a problem, how would you fix it?
 ```
@@ -8,13 +9,18 @@ int maxlen;
 Student_info s;
 max(s.name.size(), maxlen);
 ```
+The code will not work, as the type of `s.name.size()` is `size_t` and the type of `maxlen` is `int`. If we change the type of `maxlen` to `size_t`, the code now works, as comparison of same types is allowed.
 
 ### Q2: Write a program to calculate the squares of `int` values up to 100. The program should write two columns: The first lists the value; the second contains the square of that value. Use `setw` (described below) to manage the output so that the values line up in columns.
 > `setw(n)`: Returns a value of type `streamsize` (§3.1/36) that, when written on an output stream `s`, has the effect of calling `s.width(n)`.
 
+The program can be found in *q02.cpp*. It first sets the length of the output stream to 3, to fit numbers between 1 and 100. After that, since we know the longest number is 10000—which is the square of 100—has a length of 5 digits, we can set the size of the output stream to 6, leaving a mininum of one space between columns.
+
 ### Q3: What happens if we rewrite the previous program to allow values up to but not including 1000 but neglect to change the arguments to `setw`? Rewrite the program to be more robust in the face of changes to allow `i` to grow without adjusting the `setw` arguments.
+If we rewrite the program to allow values up to 1000, the previously set output stream size will be not enough to fit all the results on different columns. The `get_length` function in *q03.cpp* finds the length of an `int` when it is converted to a `string`. Using this function, the `streamsize`s are set to leave a minimum of one space between columns, regardless of the maximum limit.
 
 ### Q4: Now change your squares program to use `double` values instead of `int`s. Use manipulators to manage the output so that the values line up in columns.
+The `get_length` function is modified to accept double values and different precisions to return the maximum length of a `double` when it is converted to a `string`. `std::fixed` is used here to set the output's formatting to show fixed-point notation instead of scientific notation. The changes can be seen in *q04.cpp*.
 
 ### Q5: Write a function that reads words from an input stream and stores them in a `vector`. Use that function both to write programs that count the number of words in the input, and to count how many times each word occured.
 
