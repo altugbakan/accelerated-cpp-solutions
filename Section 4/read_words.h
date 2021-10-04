@@ -6,5 +6,4 @@
 #include <string>
 
 std::istream& read_words(std::istream& is, std::vector<std::string>& vec);
-
 #endif
