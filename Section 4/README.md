@@ -26,10 +26,13 @@ The `get_length` function is modified to accept double values and different prec
 The function that reads words and stores them in a `vector` can be found in `read_words.cpp`. The function is similar to the `read_hw` function in the book, with the difference being that the `vector`'s type is `string` on this case. The program that counts the number of the words can be found in *q05-1.cpp*. It simply outputs the size of the vector. The program counting the number of the words in the input can be found in *q05-2.cpp*. It first sorts the `vector` to group same words with each other, to ease the counting process.
 
 ### Q6: Rewrite the `Student_info` structure, and the `read` and `grade` functions, so that they calculate each student's grades as part of reading the input, and store only the final grade.
+The rewritten `Student_info` structure and `grade` function can be found in *Student_info.cpp* and *grade.cpp* respectively. Since we do not store the homeworks or the exam grades of the students, a single `grade` function is enough for our needs. The demonstration of the rewritten code can be found in *q06.cpp*, which contains a similar code to the grading program on the book.
 
 ### Q7: Write a program to calculate the average of the numbers stored in a `vector<double>`.
+The program can be found in *q07.cpp*. It first asks the user for double input to fill the `vector<double>`, then it calculates the average of the numbers stored.
 
 ### Q8: If the following code is legal, what can we infer about the return type of `f`?
 ```
 double d = f()[n];
 ```
+Since we can access the `n`th element of the return value, and know that it is a `double`, we can infer that `f`'s return type is a `double` container, like `vector` or `array`. 
