@@ -23,6 +23,7 @@ If we rewrite the program to allow values up to 1000, the previously set output 
 The `get_length` function is modified to accept double values and different precisions to return the maximum length of a `double` when it is converted to a `string`. `std::fixed` is used here to set the output's formatting to show fixed-point notation instead of scientific notation. The changes can be seen in *q04.cpp*.
 
 ### Q5: Write a function that reads words from an input stream and stores them in a `vector`. Use that function both to write programs that count the number of words in the input, and to count how many times each word occured.
+The function that reads words and stores them in a `vector` can be found in `read_words.cpp`. The function is similar to the `read_hw` function in the book, with the difference being that the `vector`'s type is `string` on this case. The program that counts the number of the words can be found in *q05-1.cpp*. It simply outputs the size of the vector. The program counting the number of the words in the input can be found in *q05-2.cpp*. It first sorts the `vector` to group same words with each other, to ease the counting process.
 
 ### Q6: Rewrite the `Student_info` structure, and the `read` and `grade` functions, so that they calculate each student's grades as part of reading the input, and store only the final grade.
 
