@@ -29,3 +29,6 @@ The `get_length` function is modified to accept double values and different prec
 ### Q7: Write a program to calculate the average of the numbers stored in a `vector<double>`.
 
 ### Q8: If the following code is legal, what can we infer about the return type of `f`?
+```
+double d = f()[n];
+```
