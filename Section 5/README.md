@@ -2,18 +2,18 @@
 
 ### Q0: Compile, execute, and test the programs in this chapter.
 
-### Q1: Design and implement a program to produce a permuted index. A permuted index is one in which each phrase is indexed by evert word in the phrase. So, given the following input,
+### Q1: Design and implement a program to produce a permuted index. A permuted index is one in which each phrase is indexed by every word in the phrase. So, given the following input,
 ```
 The quick brown fox
 jumped over the fence
 ```
 ### the output would be
 ```
-    The quick       brown fox
+      The quick     brown fox
 jumped over the     fence
 The quick brown     fox
                     jumped over the fence
-        jumped      over the fence
+         jumped     over the fence
             The     quick brown fox
     jumped over     the fence
                     The quick brown fox
