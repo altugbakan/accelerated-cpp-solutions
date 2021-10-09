@@ -1,6 +1,7 @@
 ## Questions and Solutions
 
 ### Q0: Compile, execute, and test the programs in this chapter.
+The programs in this chapter are compiled and tested. The programs can be found in the book.
 
 ### Q1: Design and implement a program to produce a permuted index. A permuted index is one in which each phrase is indexed by every word in the phrase. So, given the following input,
 ```
@@ -9,14 +10,14 @@ jumped over the fence
 ```
 ### the output would be
 ```
-      The quick     brown fox
-jumped over the     fence
-The quick brown     fox
-                    jumped over the fence
-         jumped     over the fence
-            The     quick brown fox
-    jumped over     the fence
-                    The quick brown fox
+      The quick    brown fox
+jumped over the    fence
+The quick brown    fox
+                   jumped over the fence
+         jumped    over the fence
+            The    quick brown fox
+    jumped over    the fence
+                   The quick brown fox
 ```
 ### A good algorithm is suggested in *The AWK Programming Language* by Aho, Kernighan, and Weinberger (Addison-Wesley, 1988). That solution divides the problem into three steps:
 
@@ -30,6 +31,7 @@ fox The quick brown
 ### Of course, it will be important to know where the original phrase ends and where the rotated beginning begins.
 ### &emsp; 2. Sort the rotations.
 ### &emsp; 3. Unrotate and write the permuted index, which involves finding the separator, putting the phrase back together, and writing it properly formatted.
+The solution of this problem can be found in *q01.cpp*. It follows the algorithm explained in the question. The split function from §5.6/88 in the book is also used to break the input lines into words.
 
 ### Q2: Write the complete new version of the student-grading program, which extracts records for failing students, using `vector`s. Write another that uses `list`s. Measure the performance difference on input files of ten lines, 1,000 lines, and 10,000 lines.
 
