@@ -30,8 +30,7 @@ istream& read_hw(istream& in, double& hw)
         double x;
         double total = 0;
         size_t count = 0;
-        while (in >> x)
-        {
+        while (in >> x) {
             total += x;
             ++count;
         }
