@@ -34,10 +34,13 @@ fox The quick brown
 The solution of this problem can be found in *q01.cpp*. It follows the algorithm explained in the question, which can be examined in *Rotation.cpp*. The split function from §5.6/88 in the book is also used to break the input lines into words.
 
 ### Q2: Write the complete new version of the student-grading program, which extracts records for failing students, using `vector`s. Write another that uses `list`s. Measure the performance difference on input files of ten lines, 1,000 lines, and 10,000 lines.
+The `vector` based solution and the `list` based solution can be found in *q02-1.cpp* and *q02-2.cpp* respectively. For ten lines, the amount of seconds cannot be estimated as it finishes quickly. For 1,000 lines, the `vector` based solution took 0.004 seconds and the `list` based solution took 0.001 seconds, showing 4 times the performance. for 10,000 lines, the `vector` based solution took 0.345 seconds and the `list` based solution took 0.007 seconds, showing nearly 50 times the performance. The tests are conducted on an Intel Core i5-10600KF CPU @ 4.10GHz.
 
 ### Q3: By using a `typedef`, we can write one version of the program that implements either a `vector`-based solution or a `list`-based one. Write and test this version of the program.
+A `typedef` which has the name `student_container` is created in *q03.cpp*. By setting this value to `vector<Student_info>` or `list<Student_info>` and including the corresponding directive, we can easily swap our implementation between containers.
 
 ### Q4: Look again at the driver functions you wrote in the previous exercise. Note that it it possible to write a driver that differs only in the declaration of the type for the data structure that holds the input file. If your `vector` and `list` test drivers differ in any other way, rewrite them so that they differ only in this declaration.
+The solution in *q03.cpp* already only uses functions that are defined for both `vector` and `list`.
 
 ### Q5: Write a function named `center(const vector<string>&)` that returns a picture which all the lines in the original picture are padded out to their full width, and the padding is as evenly divided as possible between the left and right sides of the picture. What are the properties of pictures for which such a function is useful? How can you tell whether a given picture has those properties?
 
