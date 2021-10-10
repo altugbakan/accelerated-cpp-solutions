@@ -31,7 +31,7 @@ fox The quick brown
 ### Of course, it will be important to know where the original phrase ends and where the rotated beginning begins.
 ### &emsp; 2. Sort the rotations.
 ### &emsp; 3. Unrotate and write the permuted index, which involves finding the separator, putting the phrase back together, and writing it properly formatted.
-The solution of this problem can be found in *q01.cpp*. It follows the algorithm explained in the question. The split function from §5.6/88 in the book is also used to break the input lines into words.
+The solution of this problem can be found in *q01.cpp*. It follows the algorithm explained in the question, which can be examined in *Rotation.cpp*. The split function from §5.6/88 in the book is also used to break the input lines into words.
 
 ### Q2: Write the complete new version of the student-grading program, which extracts records for failing students, using `vector`s. Write another that uses `list`s. Measure the performance difference on input files of ten lines, 1,000 lines, and 10,000 lines.
 
