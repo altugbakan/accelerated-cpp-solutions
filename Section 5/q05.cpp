@@ -54,11 +54,11 @@ int main()
 {
     vector<string> picture;
     // create a picture
-    picture.push_back("***********");
-    picture.push_back("*hello    *");
-    picture.push_back("*my name  *");
-    picture.push_back("*is Altug!*");
-    picture.push_back("***********");
+    picture.push_back("*************");
+    picture.push_back("* hello     *");
+    picture.push_back("* my name   *");
+    picture.push_back("* is Altug! *");
+    picture.push_back("*************");
 
     vector<string> centered_picture = center(picture);
 
