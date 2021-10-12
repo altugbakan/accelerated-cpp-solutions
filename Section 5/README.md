@@ -45,14 +45,15 @@ The solution in *q03.cpp* already only uses functions that are defined for both 
 ### Q5: Write a function named `center(const vector<string>&)` that returns a picture which all the lines in the original picture are padded out to their full width, and the padding is as evenly divided as possible between the left and right sides of the picture. What are the properties of pictures for which such a function is useful? How can you tell whether a given picture has those properties?
 The solution can be found in *q05.cpp*. The `split` function from §5.6/88 in the book is used to get only the words from a line. This function is useful for pictures that have non zero and even number of paddings. A sample output can be seen below.
 ```
-***********             ***********
-*hello    *             *  hello  *
-*my name  *     =>      * my name *
-*is Altug!*             *is Altug!*
-***********             ***********
+*************           *************
+* hello     *           *   hello   *
+* my name   *   =>      *  my name  *
+* is Altug! *           * is Altug! *
+*************           *************
 ```
 
 ### Q6: Rewrite the `extract_fails` function from §5.1.1/77 so that instead of erasing each failing student from the input vector `students`, it copies the records for the passing students to the beginning of `students`, and then uses the `resize` function to remove the extra elements from the end of `students`. How does the performance of this version compare with the one in §5.1.1/77?
+The comparison of both implementations can be found in *q06.cpp*. For 10,000 students, the results were 0.351 seconds for the original implementation and 0.911 seconds for the modified implementation. We can see that adding elements to the start of `vector` and resizing is slower than erasing elements from the `vector`.
 
 ### Q7: Given the implementation of `frame` in §5.8.1/93, and the following code fragment
 ```
@@ -60,6 +61,7 @@ vector<string> v;
 frame(v);
 ```
 ### describe what happens in this call. In particular, trace through how both the `width` function and the `frame` function operate. Now, run this code. If the results differ from your expectations, first understand why your expectations and the program differ, and then change one to match the other.
+My expectation was for the program to output nothing, as the `width` function will return 0 and loops will be skipped. The program in *q07.cpp* shows that this is the case.
 
 ### Q8: In the `hcat` function from §5.8.3/95, what would happen if we defined `s` outside the scope of the `while`? Rewrite and execute the program to confirm your hypothesis.
 
