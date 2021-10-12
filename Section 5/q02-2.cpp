@@ -8,7 +8,6 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::list;
-using std::clock_t;
 
 list<Student_info> extract_fails(list<Student_info> students)
 {

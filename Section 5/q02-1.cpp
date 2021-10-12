@@ -8,7 +8,6 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::vector;
-using std::clock_t;
 
 vector<Student_info> extract_fails(vector<Student_info> students)
 {
