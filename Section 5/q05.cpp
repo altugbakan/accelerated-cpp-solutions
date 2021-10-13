@@ -18,7 +18,7 @@ vector<string> center(const vector<string>& picture)
     str_sz width = centered_picture[0].length() - 2;
     // iterate over the picture
     for (vector<string>::iterator i = centered_picture.begin();
-        i != centered_picture.end(); ++i) {
+        i != centered_picture.end(); ++i)
         // skip first and last lines
         if (i != centered_picture.begin() && i != centered_picture.end() - 1) {
             // remove * characters
@@ -32,9 +32,8 @@ vector<string> center(const vector<string>& picture)
                 // add the word to unpadded line
                 unpadded_line += *j;
                 // add one space if word is not the last one
-                if (j + 1 != words.end()) {
+                if (j + 1 != words.end())
                     unpadded_line += " ";
-                }
             }
             // get the unpadded line width
             str_sz unpadded_line_width = unpadded_line.length();
@@ -45,7 +44,6 @@ vector<string> center(const vector<string>& picture)
             *i = "*" + string(left_padding, ' ') +
                 unpadded_line + string(right_padding, ' ') + "*";
         }
-    }
     
     return centered_picture;
 }
@@ -65,11 +63,12 @@ int main()
     // picture and centered_picture have the same size
     vec_sz size = picture.size();
     for (vec_sz i = 0; i < size; ++i) {
-        cout << picture[i] << "\t";
-        if (i == size / 2) {
+        cout << picture[i] << "    ";
+        if (i == size / 2)
             cout << "=>";
-        }
-        cout << "\t" << centered_picture[i] << endl;
+        else
+            cout << "  ";
+        cout << "    " << centered_picture[i] << endl;
     }
 
     return 0;

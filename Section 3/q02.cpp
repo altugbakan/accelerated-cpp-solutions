@@ -17,9 +17,8 @@ int main()
     cout << "Please enter the numbers, followed by end-of-file." << endl;
 
     // invariant: numbers contains numbers read so far
-    while (cin >> n) {
+    while (cin >> n)
         numbers.push_back(n);
-    }
 
     // sort the numbers
     sort(numbers.begin(), numbers.end());
@@ -38,16 +37,16 @@ int main()
 
     // print the quartiles
     for (vec_sz i = count; i-- > 0; ) {
-        if (i == count - 1) {
+        if (i == count - 1)
             cout << "First quartile: ";
-        } else if (i == 3 * quartile_size - 1 + quartile_remainder) {
+        else if (i == 3 * quartile_size - 1 + quartile_remainder)
             cout << endl << "Second quartile: ";
-        } else if (i == 2 * quartile_size - 1 + (quartile_remainder > 1 ?
-            quartile_remainder - 1 : 0)) {
+        else if (i == 2 * quartile_size - 1 + (quartile_remainder > 1 ?
+            quartile_remainder - 1 : 0))
             cout << endl << "Third quartile: ";
-        } else if (i == quartile_size - 1 + (quartile_remainder == 3 ? 1 : 0)) {
+        else if (i == quartile_size - 1 + (quartile_remainder == 3 ? 1 : 0))
             cout << endl << "Fourth quartile: ";
-        }
+
         cout << numbers[i] << " ";
     }
 

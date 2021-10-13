@@ -33,14 +33,12 @@ vector<Student_info> resizing_extract_fails(vector<Student_info>& students)
     vector<Student_info> fail;
     vec_std_sz original_size = students.size();
     
-    for (vec_std_sz i = 0; i != students.size(); ++i) {
-        if (students[i].final_grade < 60) {
+    for (vec_std_sz i = 0; i != students.size(); ++i)
+        if (students[i].final_grade < 60)
             fail.push_back(students[i]);
-        } else {
-            students.insert(students.begin(), students[i]);
-            ++i;
-        }
-    }
+        else
+            students.insert(students.begin(), students[i++]);
+
     students.resize(original_size - fail.size());
     return fail;
 }

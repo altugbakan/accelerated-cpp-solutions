@@ -21,9 +21,7 @@ int main()
 
     // invariant: sizes contains the length of the words read so far
     while (cin >> word)
-    {
         sizes.push_back(word.length());
-    }
     
     // sort the sizes vector
     sort(sizes.begin(), sizes.end());

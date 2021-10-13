@@ -16,9 +16,7 @@ list<string> read_each_line(istream& in)
     string s;
     // read each line and add them to a vector
     while (getline(in, s))
-    {
         lines.push_back(s);
-    }
     
     return lines;
 }
@@ -47,9 +45,8 @@ int main()
     // output the results
     string::size_type max_width = first_width(rotations);
     for (vector<Rotation>::iterator it = rotations.begin();
-        it != rotations.end(); ++it) {
-            cout << format_rotation(*it, max_width) << endl;
-    }
+        it != rotations.end(); ++it)
+        cout << format_rotation(*it, max_width) << endl;
     
     return 0;
 }

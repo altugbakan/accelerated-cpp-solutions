@@ -17,16 +17,13 @@ int main()
 
     double d;
     while (cin >> d)
-    {
         doubles.push_back(d);
-    }
 
     // find the average of the numbers stored in the vector
     double total = 0;
     double count = doubles.size();
-    for (vector<double>::size_type i = 0; i < count; ++i) {
+    for (vector<double>::size_type i = 0; i < count; ++i)
         total += doubles[i];
-    }
     
     cout << "The average is: " << total / count << endl;
 }

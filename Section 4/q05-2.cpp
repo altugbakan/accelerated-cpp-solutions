@@ -28,16 +28,14 @@ int main()
     // output the results
     string word = words[0];
     vec_sz count = 0;
-    for (vec_sz i = 0; i < words.size(); ++i) {
+    for (vec_sz i = 0; i < words.size(); ++i)
         if (word != words[i]) {
             cout << "Word " << word << " appeared " <<
                 ++count << " time" << (count > 1 ? "s." : ".") << endl;
             word = words[i];
             count = 0;
-        } else {
+        } else
             ++count;
-        }
-    }
 
     return 0;
 }

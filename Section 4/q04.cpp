@@ -34,4 +34,6 @@ int main()
         cout << fixed << setprecision(decimal_points) << setw(max_len) << i <<
             setw(max_sq + 1) << i * i << setprecision(prec) << endl;
     }
+
+    return 0;
 }

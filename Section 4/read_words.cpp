@@ -13,9 +13,8 @@ istream& read_words(istream& is, vector<string>& words)
         words.clear();
 
         // read and store the words
-        while (is >> word) {
+        while (is >> word)
             words.push_back(word);
-        }
 
         // reset the error state
         is.clear();

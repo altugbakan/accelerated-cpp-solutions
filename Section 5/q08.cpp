@@ -74,9 +74,8 @@ int main()
     // vector<string> result = hcat(picture, another_picture);
 
     for (vector<string>::const_iterator line = result.begin();
-        line != result.end(); ++line) {
+        line != result.end(); ++line)
         cout << *line << endl;
-    }
 
     return 0;
 }

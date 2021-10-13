@@ -44,10 +44,9 @@ int main()
     }
 
     // output the results
-    for (vec_sz i = 0; i < students.size(); ++i) {
+    for (vec_sz i = 0; i < students.size(); ++i)
         cout << "Student " << students[i] << "'s Final Grade: " <<
             grades[i] << "." << endl;
-    }
     
     return 0;
 }

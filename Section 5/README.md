@@ -45,11 +45,11 @@ The solution in [q03.cpp](./q03.cpp) already only uses functions that are define
 ### Q5: Write a function named `center(const vector<string>&)` that returns a picture which all the lines in the original picture are padded out to their full width, and the padding is as evenly divided as possible between the left and right sides of the picture. What are the properties of pictures for which such a function is useful? How can you tell whether a given picture has those properties?
 The solution can be found in [q05.cpp](./q05.cpp). The `split` function from §5.6/88 in the book is used to get only the words from a line. This function is useful for pictures that have non zero and even number of paddings. A sample output can be seen below.
 ```
-*************           *************
-* hello     *           *   hello   *
-* my name   *   =>      *  my name  *
-* is Altug! *           * is Altug! *
-*************           *************
+*************          *************
+* hello     *          *   hello   *
+* my name   *    =>    *  my name  *
+* is Altug! *          * is Altug! *
+*************          *************
 ```
 
 ### Q6: Rewrite the `extract_fails` function from §5.1.1/77 so that instead of erasing each failing student from the input vector `students`, it copies the records for the passing students to the beginning of `students`, and then uses the `resize` function to remove the extra elements from the end of `students`. How does the performance of this version compare with the one in §5.1.1/77?
