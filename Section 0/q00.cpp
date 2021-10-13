@@ -1,4 +1,4 @@
-// Code is taken from §0/1 in the book.
+// code is taken from §0/1
 
 // a small C++ program
 #include <iostream>
