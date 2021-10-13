@@ -67,7 +67,7 @@ int main()
     return 0;
 }
 ```
-The program is not valid as `x` is not reachable from outside its block. The code can be fixed by removing the inner brackets surrounding the definition of `x`. An example can be found in *q05.cpp*.
+The program is not valid as `x` is not reachable from outside its block. The code can be fixed by removing the inner brackets surrounding the definition of `x`. An example can be found in [q05.cpp](./q05.cpp).
 
 ### Q6: What does the following program do if, when it asks you for input, you type two names (for example, `Samuel Beckett`)? Predict the behavior before running the program, then try it.
 ```
