@@ -64,8 +64,10 @@ frame(v);
 My expectation was for the program to output nothing, as the `width` function will return 0 and loops will be skipped. The program in *q07.cpp* shows that this is the case.
 
 ### Q8: In the `hcat` function from §5.8.3/95, what would happen if we defined `s` outside the scope of the `while`? Rewrite and execute the program to confirm your hypothesis.
+If we define `s` outside the scope of the while, the program throws an `std::length_error` if the width of the left picture is larger than the width of the right picture. Since we do not redefine `s`, the previous value from the while loop remains, causing unexpected behavior. The rewritten program can be found in *q08.cpp*.
 
 ### Q9: Write a program to write the words in the input that do not contain any uppercase letters followed by the words that contain one or more uppercase letters.
+The program can be found in *q09.cpp*. It holds that do not contain any uppercase letters and the words that contain one or more uppercase letters in separate `list`s and outputs them.
 
 ### Q10: Palindromes are words that are spelled the same right to left as left to right. Write a program to find all palindromes in a dictionary. Next, find the longest palindrome.
 
