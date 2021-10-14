@@ -15,7 +15,7 @@ vector<string> center(const vector<string>& picture)
 {
     vector<string> centered_picture = picture;
     // the picture is assumed to be rectangular
-    str_sz width = centered_picture[0].length() - 2;
+    str_sz width = centered_picture[0].size() - 2;
     // iterate over the picture
     for (vector<string>::iterator i = centered_picture.begin();
         i != centered_picture.end(); ++i)
@@ -36,7 +36,7 @@ vector<string> center(const vector<string>& picture)
                     unpadded_line += " ";
             }
             // get the unpadded line width
-            str_sz unpadded_line_width = unpadded_line.length();
+            str_sz unpadded_line_width = unpadded_line.size();
             // get the size of the paddings
             str_sz left_padding = (width - unpadded_line_width) / 2;
             str_sz right_padding = width - unpadded_line_width - left_padding;

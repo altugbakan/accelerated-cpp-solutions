@@ -106,8 +106,8 @@ bool compare(const Rotation& x, const Rotation& y)
 {
     string word_x = x.words[0];
     string word_y = y.words[0];
-    str_sz x_length = word_x.length();
-    str_sz y_length = word_y.length();
+    str_sz x_length = word_x.size();
+    str_sz y_length = word_y.size();
     // convert to lowercase
     for (str_sz i = 0; i < x_length; ++i)
         word_x[i] = tolower(word_x[i]);
