@@ -70,5 +70,7 @@ If we define `s` outside the scope of the while, the program throws an `std::len
 The program can be found in [q09.cpp](./q09.cpp). It holds words that do not contain any uppercase letters and the words that contain one or more uppercase letters in separate `list`s and outputs them.
 
 ### Q10: Palindromes are words that are spelled the same right to left as left to right. Write a program to find all palindromes in a dictionary. Next, find the longest palindrome.
+The program can be found in [q10.cpp](./q10.cpp). It reverses the input `string` and compares it with the original `string` to find if it's a palindrome.
 
 ### Q11: In text processing it is sometimes useful to know whether a word has any ascenders or descenders. Ascenders are the parts of lowercase letters that extend above the text line; in the English alphabet, the letters b, d, f, h, k, l, and t have ascenders. Similarly, the descenders are the parts of lowercase letters that descend below the line; in English, the letters, g, j, p, q, and y have descenders. Write a program to determine if a word has any ascenders or descenders. Extend the program to find the longest word in the dictionary that has neither ascenders nor descenders.
+The program can be found in [q11.cpp](./q11.cpp). It checks each character of a `string` to find if it has an ascender or a descender.
