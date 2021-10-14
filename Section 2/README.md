@@ -13,10 +13,10 @@ Separating `pad` variable to `pad_horizontal` and `pad_vertical` and changing th
 Instead of defining the pad variable, we can ask for user input with `cin`. Note that for this change, we also need to remove the `const` tag from the variable, as it will change with user input. The code can be found in [q03.cpp](./q03.cpp).
 
 ### Q4: The framing program writes the mostly blank lines that separate the borders from the greeting one character at a time. Change the program so that it writes all the spaces needed in a single output expression.
-For the non-border rows excluding the name row, we can calculate the amount of spaces by subtracting 2 from `cols`. For the name row, the amount of spaces is specified by `pad`. Using this knowledge and the string constructor `string(const char* s, size_t n)`, we can print required spaces in a single output expression. The code can be found in [q04.cpp](./q04.cpp).
+For the non-border rows excluding the name row, we can calculate the number of spaces by subtracting 2 from `cols`. For the name row, the amount of spaces is specified by `pad`. Using this knowledge and the string constructor `string(const char* s, size_t n)`, we can print the required spaces in a single output expression. The code can be found in [q04.cpp](./q04.cpp).
 
 ### Q5: Write a set of "*" characters so that they form a square, a rectangle, and a triangle.
-The shapes are written with parameters in [q05.cpp](./q05.cpp). You can experiment with the variables `square_length`, `rectangle_width`, `rectangle_height` and `triangle_height`.
+The shapes are written with parameters in [q05.cpp](./q05.cpp). You can experiment with the variables `square_length`, `rectangle_width`, `rectangle_height`, and `triangle_height`.
 
 ### Q6: What does the following code do?
 ```
@@ -35,7 +35,7 @@ The code to count down from `10` to `-5` can be found in [q07.cpp](./q07.cpp).
 The code that generates the product of the numbers in the range `[1, 10]` can be found in [q08.cpp](./q08.cpp). The result is 3,628,800.
 
 ### Q9: Write a program that asks the user to enter two numbers and tells the user which number is larger than the other.
-The code can be found in [q09.cpp](./q09.cpp). If both numbers are equal, program outputs the value.
+The code can be found in [q09.cpp](./q09.cpp). If both numbers are equal, the program outputs the value.
 
 ### Q10: Explain each of the uses of `std::` in the following program:
 ```

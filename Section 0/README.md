@@ -2,7 +2,7 @@
 
 ### Q0: Compile and run the `Hello, world!` program.
 
-The code can be found on [q00.cpp](./q00.cpp). You have to build it using a compiler you are using (for example: g++). After you have built the program, run the output file (Double click the .exe file if you are using Windows).
+The code can be found on [q00.cpp](./q00.cpp). You have to build it using a compiler you are using (for example g++). After you have built the program, run the output file (Double click the .exe file if you are using Windows).
 
 ### Q1: What does the following statement do?
 ```
@@ -27,7 +27,7 @@ The solution can be found in [q04.cpp](./q04.cpp). Four spaces are used instead 
 #include <iostream>
 int main() std::cout << "Hello, world!" << std::endl;
 ```
-This is not a valid program as the curly braces which should be present after the main function are missing. We get a compile time error regarding this issue.
+This is not a valid program as the curly braces which should be present after the main function are missing. We get a compile-time error regarding this issue.
 
 ### Q6: Is this a valid program? Why or why not?
 ```
@@ -49,7 +49,7 @@ int main()
     return 0;
 }
 ```
-This is not a valid program, as the first ***/** in the comment closes the multi-line comment. The words after that remains outside the comment block, causing errors.
+This is not a valid program, as the first ***/** in the comment closes the multi-line comment. The words after that remain outside the comment block, causing errors.
 
 ### Q8: ...and this one?
 ```

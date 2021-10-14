@@ -8,7 +8,7 @@ The programs in this chapter are compiled and tested. The programs can be found 
 const std::string hello = "Hello";
 const std::string message = hello + ", world" + "!";
 ```
-The definitions are valid. The first definition is a generic string definition. In the second definition, at first it seems like we are adding two string literals, however, the add operation is left-associative so we are adding a string variable and a string literal in each operation. The operation can be visualized as follows:
+The definitions are valid. The first definition is a generic string definition. In the second definition, at first, it seems like we are adding two string literals, however, the add operation is left-associative so we are adding a string variable and a string literal in each operation. The operation can be visualized as follows:
 <p align=middle>(variable + literal) + literal</p>
 <p align=middle>variable + literal</p>
 <p align=middle>variable</p>
@@ -18,7 +18,7 @@ The definitions are valid. The first definition is a generic string definition. 
 const std::string exclam = "!";
 const std::string message = "Hello" + ", world" + exclam;
 ```
-The first definition is valid, however the second one is not. This is due to the addition of two string literals, which is invalid.
+The first definition is valid, however, the second one is not. This is due to the addition of two string literals, which is invalid.
 
 ### Q3: Is the following program valid? If so, what does it do? If not, why not?
 ```
@@ -87,4 +87,4 @@ int main()
     return 0;
 }
 ```
-This example takes two inputs to greet two people. Typing two names at the same time is the same with typing two names separately, as `std::cin` takes the first input until the whitespace (not before a character), so both inputs will be consumed by the two `std::cin` input streams.
+This example takes two inputs to greet two people. Typing two names at the same time is the same as typing two names separately, as `std::cin` takes the first input until the whitespace (not before a character), so both inputs will be consumed by the two `std::cin` input streams.
