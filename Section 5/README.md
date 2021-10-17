@@ -52,7 +52,7 @@ The solution can be found in [q05.cpp](./q05.cpp). The `split` function from §5
 *************          *************
 ```
 
-### Q6: Rewrite the `extract_fails` function from §5.1.1/77 so that instead of erasing each failing student from the input vector `students`, it copies the records for the passing students to the beginning of `students`, and then uses the `resize` function to remove the extra elements from the end of `students`. How does the performance of this version compare with the one in §5.1.1/77?
+### Q6: Rewrite the `extract_fails` function from §5.1.1/77 so that instead of erasing each failing student from the input `vector` `students`, it copies the records for the passing students to the beginning of `students`, and then uses the `resize` function to remove the extra elements from the end of `students`. How does the performance of this version compare with the one in §5.1.1/77?
 The comparison of both implementations can be found in [q06.cpp](./q06.cpp). For 10,000 students, the results were 0.351 seconds for the original implementation and 0.911 seconds for the modified implementation. We can see that adding elements to the start of `vector` and resizing is slower than erasing elements from the `vector`.
 
 ### Q7: Given the implementation of `frame` in §5.8.1/93, and the following code fragment
