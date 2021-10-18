@@ -1,8 +1,10 @@
 ## Questions and Solutions
 
 ### Q0: Compile, execute, and test the programs in this chapter.
+The programs in this chapter are compiled and tested. The programs can be found in the book.
 
-### Q1: Reimplement the `frame` and `hcat` operations from §5.8.1/93 and §5.8.3/94 to use iterators.
+### Q1: Reimplement the `frame` and `hcat` operations from §5.8.1/93 and §5.8.3/95 to use iterators.
+The program can be found in [q01.cpp](./q01.cpp). The index loops are changed with `iterator` loops.
 
 ### Q2: Write a program to test the `find_urls` function.
 
