@@ -1,3 +1,5 @@
+#include <stdexcept>
+#include <algorithm>
 #include "Student_info.h"
 
 using std::cout;

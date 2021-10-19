@@ -2,4 +2,5 @@
 #define GUARD_grade_h
 
 double grade(double, double, double);
+
 #endif

@@ -20,5 +20,4 @@ std::string format_rotation(Rotation&, std::string::size_type);
 std::string::size_type first_width(const Rotation&);
 std::string::size_type first_width(const std::vector<Rotation>&);
 bool compare(const Rotation&, const Rotation&);
-
 #endif
