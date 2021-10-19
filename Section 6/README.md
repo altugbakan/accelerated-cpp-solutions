@@ -7,6 +7,7 @@ The programs in this chapter are compiled and tested. The programs can be found 
 The program can be found in [q01.cpp](./q01.cpp). The index loops are changed with `iterator` loops.
 
 ### Q2: Write a program to test the `find_urls` function.
+The test program can be found in [q02.cpp](./q02.cpp). The program finds the URLs in the sample text.
 
 ### Q3: What does this program fragment do?
 ```
@@ -15,6 +16,7 @@ vector<int> v;
 copy(u.begin(), u.end(), v.begin());
 ```
 ### Write a program that contains this fragment, and compile and execute it.
+The program fragment first creates a `vector<int>` with ten items, with each being 100. It then tries to copy the firstly created vector to the second one; however, it throws an error as `v.begin()` is invalidated after writing to `v`. Using `front_inserter(v)` instead solves the problem. The program can be found in [q03.cpp](./q03.cpp).
 
 ### Q4: Correct the program you wrote in the previous exercise to copy from `u` into `v`. There are at least two possible ways to correct the program. Implement both, and describe the relative advantages and disadvantages of each approach.
 
