@@ -19,6 +19,7 @@ copy(u.begin(), u.end(), v.begin());
 The program fragment first creates a `vector<int>` with ten items, with each being 100. It then tries to copy the firstly created vector to the second one; however, it throws an error as `v.begin()` is invalidated after writing to `v`. The program can be found in [q03.cpp](./q03.cpp).
 
 ### Q4: Correct the program you wrote in the previous exercise to copy from `u` into `v`. There are at least two possible ways to correct the program. Implement both, and describe the relative advantages and disadvantages of each approach.
+We can correct the program using `back_inserter` or simply copying the `vector` in the definition of `v`. For 1,000,000 items, `back_inserter` took 0.012 seconds, and copying took 0.001 seconds, so we can analyze that copying when initializing is faster for `vector`s. The program can be found in [q04.cpp](./q04.cpp).
 
 ### Q5: Write an analysis function to call `optimistic_median`.
 
