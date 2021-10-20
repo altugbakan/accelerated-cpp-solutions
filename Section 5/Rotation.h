@@ -1,13 +1,8 @@
 #ifndef GUARD_Rotation
 #define GUARD_Rotation
 
-#include <string>
 #include <vector>
-#include <list>
-#include <iostream>
-#include <algorithm>
-#include <cctype>
-#include "split.h"
+#include <string>
 
 struct Rotation {
     std::vector<std::string> words;

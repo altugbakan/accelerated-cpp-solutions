@@ -53,8 +53,8 @@ int main()
     // output the last word
     cout << *(words.end() - 1) << "." << endl << endl;
     cout << "The longest word that does not have ascenders or "
-        "descenders is \"" << longest_word << "\" with " << max_length <<
-        " letters." << endl;
+        "descenders is \"" << longest_word << "\" with " << max_length
+        << " letters." << endl;
 
     return 0;
 }

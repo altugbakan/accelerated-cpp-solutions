@@ -67,8 +67,8 @@ int main()
     double time_modified = clock() - begin;
 
     // output the results
-    cout << "Original function took " << time_original / CLOCKS_PER_SEC <<
-        " seconds and the modified function took " << time_modified / 
+    cout << "Original function took " << time_original / CLOCKS_PER_SEC
+        << " seconds and the modified function took " << time_modified / 
         CLOCKS_PER_SEC << " seconds for " << count << " students." << endl;
 
     return 0;

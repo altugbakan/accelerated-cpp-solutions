@@ -30,8 +30,8 @@ int main()
     vec_sz count = 0;
     for (vec_sz i = 0; i < words.size(); ++i)
         if (word != words[i]) {
-            cout << "Word " << word << " appeared " <<
-                ++count << " time" << (count > 1 ? "s." : ".") << endl;
+            cout << "Word " << word << " appeared "
+                << ++count << " time" << (count > 1 ? "s." : ".") << endl;
             word = words[i];
             count = 0;
         } else

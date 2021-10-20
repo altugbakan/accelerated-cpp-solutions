@@ -1,4 +1,6 @@
 #include <algorithm>
+#include <vector>
+#include <string>
 #include <cctype>
 #include "find_urls.h"
 

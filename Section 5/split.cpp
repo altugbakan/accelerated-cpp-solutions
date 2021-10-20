@@ -1,5 +1,6 @@
 // code is taken from §5.6/88
-
+#include <vector>
+#include <string>
 #include "split.h"
 
 using std::vector;

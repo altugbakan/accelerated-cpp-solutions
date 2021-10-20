@@ -44,8 +44,8 @@ int main()
     student_container fails = extract_fails(students);
     double end = clock();
 
-    cout << "Extracting fails for " << count << " students took " <<
-        (end - begin) / CLOCKS_PER_SEC << " seconds." << endl;
+    cout << "Extracting fails for " << count << " students took "
+        << (end - begin) / CLOCKS_PER_SEC << " seconds." << endl;
 
     return 0;
 }

@@ -1,3 +1,5 @@
+#include <vector>
+#include <string>
 #include "frame.h"
 
 using std::vector;

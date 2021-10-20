@@ -40,11 +40,15 @@ int main()
         cout << students[i].name
              << string(maxlen + 1 - students[i].name.size(), ' ');
 
-        // write the grade
-        streamsize prec = cout.precision();
-        cout << setprecision(3) << students[i].final_grade
-             << setprecision(prec) << endl;
+        // write the grades
+        try {
+            streamsize prec = cout.precision();
+            cout << setprecision(3) << students[i].final_grade
+                << setprecision(prec) << endl;
+        } catch (domain_error e) {
+            cout << e.what();
+        }
+        cout << endl;
     }
-    
     return 0;
 }

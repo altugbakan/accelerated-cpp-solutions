@@ -44,8 +44,8 @@ int main()
         cout << *i << ", ";
     // output the last palindrome
     cout << *(palindromes.end() - 1) << "." << endl << endl;
-    cout << "The longest palindrome is \"" << longest_word <<
-        "\" with " << max_length << " letters." << endl;
+    cout << "The longest palindrome is \"" << longest_word
+        << "\" with " << max_length << " letters." << endl;
 
     return 0;
 }

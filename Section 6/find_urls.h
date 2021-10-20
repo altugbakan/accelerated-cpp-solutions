@@ -1,5 +1,5 @@
-#ifndef GUARD_FIND_URLS
-#define GUARD_FIND_URLS
+#ifndef GUARD_find_urls_h
+#define GUARD_find_urls_h
 
 #include <vector>
 #include <string>

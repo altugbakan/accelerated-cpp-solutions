@@ -31,8 +31,8 @@ int main()
 
     for (double i = 1.0; i < max_number; ++i) {
         streamsize prec = cout.precision();
-        cout << fixed << setprecision(decimal_points) << setw(max_len) << i <<
-            setw(max_sq + 1) << i * i << setprecision(prec) << endl;
+        cout << fixed << setprecision(decimal_points) << setw(max_len) << i
+            << setw(max_sq + 1) << i * i << setprecision(prec) << endl;
     }
 
     return 0;

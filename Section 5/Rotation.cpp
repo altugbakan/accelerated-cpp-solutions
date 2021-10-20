@@ -1,3 +1,10 @@
+#include <string>
+#include <vector>
+#include <list>
+#include <iostream>
+#include <algorithm>
+#include <cctype>
+#include "split.h"
 #include "Rotation.h"
 
 using std::string;
