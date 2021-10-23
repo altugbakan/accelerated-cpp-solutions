@@ -22,8 +22,10 @@ The program fragment first creates a `vector<int>` with ten items, with each bei
 We can correct the program using `back_inserter` or simply copying the `vector` in the definition of `v`. For 1,000,000 items, `back_inserter` took 0.012 seconds, and copying took 0.001 seconds, so we can analyze that copying when initializing is faster for `vector`s. The program can be found in [q04.cpp](./q04.cpp).
 
 ### Q5: Write an analysis function to call `optimistic_median`.
+The `optimistic_median_analysis` function can be found in [analysis.cpp](./analysis.cpp). Similar to the other analysis functions, the `optimistic_median_analysis` function uses `transform` to apply `optimistic_median` to each student and writes each result to a `vector`, then returns the `median` of the results. The function that shows all three analyses can be found in [q05.cpp](./q05.cpp).
 
 ### Q6: Note that the function from the previous exercise and the functions from §6.2.2/113 and §6.2.3/115 do the same task. Merge these three analysis functions into a single function.
+The `analysis` function can be found in [analysis.cpp](./analysis.cpp). The `write_analysis` function is also overloaded to support the newly created function. The function that shows all three analyses can be found in [q06.cpp](./q06.cpp).
 
 ### Q7: The portion of the grading analysis program from §6.2.1/110 that read and classified student records depending on whether they did (or did not) do all the homework is similar to the problem we solved in `extract_fails`. Write a function to handle this subproblem.
 
