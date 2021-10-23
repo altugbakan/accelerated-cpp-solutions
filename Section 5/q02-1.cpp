@@ -9,7 +9,7 @@ using std::cout;
 using std::endl;
 using std::vector;
 
-vector<Student_info> extract_fails(vector<Student_info> students)
+vector<Student_info> extract_fails(vector<Student_info>& students)
 {
     vector<Student_info> fails;
     vector<Student_info>::iterator it = students.begin();

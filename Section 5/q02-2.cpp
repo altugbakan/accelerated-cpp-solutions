@@ -9,7 +9,7 @@ using std::cout;
 using std::endl;
 using std::list;
 
-list<Student_info> extract_fails(list<Student_info> students)
+list<Student_info> extract_fails(list<Student_info>& students)
 {
     list<Student_info> fails;
     list<Student_info>::iterator it = students.begin();

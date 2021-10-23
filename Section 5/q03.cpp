@@ -13,7 +13,7 @@ using std::clock_t;
 typedef std::vector<Student_info> student_container;
 // typedef std::list<Student_info> student_container;
 
-student_container extract_fails(student_container students)
+student_container extract_fails(student_container& students)
 {
     student_container fails;
     student_container::iterator it = students.begin();
