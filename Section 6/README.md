@@ -28,7 +28,10 @@ The `optimistic_median_analysis` function can be found in [analysis.cpp](./analy
 The `analysis` function can be found in [analysis.cpp](./analysis.cpp). The `write_analysis` function is also overloaded to support the newly created function. The function that shows all three analyses can be found in [q06.cpp](./q06.cpp).
 
 ### Q7: The portion of the grading analysis program from §6.2.1/110 that read and classified student records depending on whether they did (or did not) do all the homework is similar to the problem we solved in `extract_fails`. Write a function to handle this subproblem.
+The function `extract_didnt` can be found in [q07.cpp](./q07.cpp). The code is similar to the `extract_fails` function, however, it uses the `did_all_hw` function instead of the `fgrade` function.
 
 ### Q8: Write a single function that can be used to classify students based on criteria of your choice. Test this function by using it in place of the `extract_fails` program, and use it in the program to analyze student grades.
+The modified `fgrade` can be found in [q08.cpp](./q08.cpp). Instead of calculating the final grade normally, the modified `fgrade` function uses the `optimistic_median` function to calculate the final grade of a student. The `extract_fails` program can be used with the modified `fgrade` function.
 
 ### Q9: Use a library algorithm to concatenate all the elements of a `vector<string>`.
+The program can be found in [q09.cpp](./q09.cpp). Using `accumulate` function adds all elements of a `vector<string>`, which results in concatenation. `string()` is used as the initial value, representing an empty `string`.
