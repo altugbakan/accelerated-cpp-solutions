@@ -29,12 +29,13 @@ int main()
 {
     vector<Student_info> students;
     Student_info student;
-    vector<Student_info>::size_type count = 0;
+
     // read all student data
-    while (read(cin, student)) {
+    while (read(cin, student))
         students.push_back(student);
-        ++count;
-    }
+
+    // save the original size
+    vector<Student_info>::size_type count = students.size();
 
     double begin = clock();
     vector<Student_info> fails = extract_fails(students);

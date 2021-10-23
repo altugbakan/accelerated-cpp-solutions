@@ -47,12 +47,13 @@ int main()
 {
     vector<Student_info> students;
     Student_info student;
-    vec_std_sz count = 0;
     // read all student data
-    while (read(cin, student)) {
+    while (read(cin, student))
         students.push_back(student);
-        ++count;
-    }
+
+    // save the original size
+    vec_std_sz count = students.size();
+
     // create a copy to measure both functions
     vector<Student_info> students_copy(students);
 

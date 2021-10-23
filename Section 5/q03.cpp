@@ -33,12 +33,13 @@ int main()
 {
     student_container students;
     Student_info student;
-    student_container::size_type count = 0;
+
     // read all student data
-    while (read(cin, student)) {
+    while (read(cin, student))
         students.push_back(student);
-        ++count;
-    }
+
+    // save the original size
+    student_container::size_type count = students.size();
 
     double begin = clock();
     student_container fails = extract_fails(students);

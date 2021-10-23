@@ -29,12 +29,13 @@ int main()
 {
     list<Student_info> students;
     Student_info student;
-    list<Student_info>::size_type count = 0;
+    
     // read all student data
-    while (read(cin, student)) {
+    while (read(cin, student))
         students.push_back(student);
-        ++count;
-    }
+
+    // save the original size
+    list<Student_info>::size_type count = students.size();
 
     double begin = clock();
     list<Student_info> fails = extract_fails(students);
