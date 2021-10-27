@@ -1,8 +1,10 @@
 ## Questions and Solutions
 
 ### Q0: Compile, execute, and test the programs in this chapter.
+The programs in this chapter are compiled and tested. The programs can be found in the book.
 
 ### Q1: Extend the program from §7.2/124 to produce its output sorted by occurence count. That is, the output should group all the words that occur once, followed by those that occur twice, and so on.
+The extended program can be found in [q01.cpp](./q01.cpp). After reading and storing the counts of words, the program stores them in a new `map<int, vector<string> >`, in which the keys represent the occurrence count, and the values stored in the `vector` represent the words.
 
 ### Q2: Extend the program in §4.2.3/64 to assign letter grades by ranges:
 <pre>
@@ -13,6 +15,7 @@ D 60-69.99...
 F <60
 </pre>
 ### The output should list how many students fall into each category.
+The extended program can be found in [q02.cpp](./q02.cpp). After reading the grades of the students, the program stores the corresponding student in a `map<string, vector<Student_info> >`, in which the keys represent the letter grades and the values stored in the `vector` represent the students.
 
 ### Q3: The cross-reference program from §7.3/126 could be improved: As it stands, if a word occurs more than once on the same input line, the program will report that line multiple times. Change the code so that it detects multiple occurences of the same line number and inserts the line number only once.
 
