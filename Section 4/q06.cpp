@@ -3,9 +3,8 @@
 #include <ios>
 #include <iostream>
 #include <stdexcept>
-#include <string>
 #include <vector>
-#include "grade.h"
+#include <string>
 #include "Student_info.h"
 
 using std::cin;                             using std::setprecision;
