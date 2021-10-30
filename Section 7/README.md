@@ -18,6 +18,7 @@ F <60
 The extended program can be found in [q02.cpp](./q02.cpp). After reading the grades of the students, the program stores the corresponding student in a `map<string, vector<Student_info> >`, in which the keys represent the letter grades and the values stored in the `vector` represent the students.
 
 ### Q3: The cross-reference program from §7.3/126 could be improved: As it stands, if a word occurs more than once on the same input line, the program will report that line multiple times. Change the code so that it detects multiple occurences of the same line number and inserts the line number only once.
+The program can be found in [q03.cpp](./q03.cpp). Before inserting the `line_number` into the specified word's `vector<int>`, it tries to find if the said number is already included in the `vector<int>` using `find`.
 
 ### Q4: The output produced by the cross-reference program will be ungainly if the input file is large. Rewrite the program to break up the output if the lines get too long.
 
