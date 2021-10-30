@@ -57,5 +57,6 @@ int main()
         // write the last student's name without a comma
         cout << (it->second.end() - 1)->name << endl;
     }
+    
     return 0;
 }
