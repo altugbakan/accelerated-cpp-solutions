@@ -89,7 +89,7 @@ int main()
     // horizontally concatenate
     vector<string> concatenated = hcat(framed_left, framed_right);
 
-    // output the results
+    // write the results
     for (vector<string>::const_iterator it = concatenated.begin();
         it != concatenated.end(); ++it)
         cout << *it << endl;

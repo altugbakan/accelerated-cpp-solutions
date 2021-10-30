@@ -35,7 +35,7 @@ int main()
     // extract students who did not do their homework
     vector<Student_info> didnt = extract_didnt(students);
 
-    // output the results
+    // write the results
     cout << "Students who did all their homework are: ";
     for (vector<Student_info>::const_iterator it = students.begin();
         it != students.end(); ++it)

@@ -38,7 +38,7 @@ int main()
         }
     }
 
-    // output the results
+    // write the results
     size = words.size();
     for (vec_sz i = 0; i < size; ++i)
         cout << "Word: " << words[i] << ", Count: " << counts[i] << endl;

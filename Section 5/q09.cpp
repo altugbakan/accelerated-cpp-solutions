@@ -31,12 +31,12 @@ int main()
         else
             upper.push_back(word);
     
-    // output all lowercase words
+    // write all lowercase words
     for (list<string>::const_iterator it = lower.begin();
         it != lower.end(); ++it)
         cout << *it << " ";
     
-    // output words that contain uppercase
+    // write words that contain uppercase
     for (list<string>::const_iterator it = upper.begin();
         it != upper.end(); ++it)
         cout << *it << " ";

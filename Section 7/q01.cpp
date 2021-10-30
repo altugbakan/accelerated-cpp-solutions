@@ -30,15 +30,21 @@ int main()
     // write the words and associated counts
     for (map<int, vector<string> >::const_iterator it = occurences.begin();
          it != occurences.end(); ++it) {
-        cout << "words that occur " << it->first << " time"
-            << (it->first > 1 ? "s:\t" : ":\t");
+        // write the count
+        cout << "words that occur " << it->first << " time(s): ";
         
-        for (vector<string>::const_iterator sit = it->second.begin();
-            sit != it->second.end() - 1; ++sit) {
-            cout << *sit << ", ";
+        // followed by one or more words
+        vector<string>::const_iterator word_it = it->second.begin();
+        cout << *word_it; // write the first word number
+
+        ++word_it;
+        // write the rest of the words, if any
+        while (word_it != it->second.end()) {
+            cout << ", " << *word_it; 
+            ++word_it;
         }
-        // write the last word without a comma
-        cout << *(it->second.end() - 1) << endl;
+        // write a new line to separate each count from the next
+        cout << endl;
     }
 
     return 0;

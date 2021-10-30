@@ -26,7 +26,7 @@ int main()
     // sort the sizes vector
     sort(sizes.begin(), sizes.end());
 
-    // output the results
+    // write the results
     cout << "Shortest length: " << sizes[0] << endl;
     cout << "Longest length: " << sizes[sizes.size() - 1] << endl;
 }

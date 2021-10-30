@@ -25,7 +25,7 @@ int main()
     // sort the vector to group same words
     sort(words.begin(), words.end());
 
-    // output the results
+    // write the results
     string word = words[0];
     vec_sz count = 0;
     for (vec_sz i = 0; i < words.size(); ++i)

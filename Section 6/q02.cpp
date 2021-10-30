@@ -16,7 +16,7 @@ int main()
     // find the urls
     vector<string> urls = find_urls(test);
 
-    // output the results
+    // write the results
     cout << "Found URLs are: " << endl;
     for (vector<string>::const_iterator it = urls.begin();
         it != urls.end(); ++it)

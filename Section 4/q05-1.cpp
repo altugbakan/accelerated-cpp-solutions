@@ -19,7 +19,7 @@ int main()
     // using the created function
     read_words(cin, words);
     
-    // output the result
+    // write the result
     cout << "There are " << words.size() << " words in the input." << endl;
 
     return 0;

@@ -43,7 +43,7 @@ int main()
         grades.push_back(0.2 * midterm + 0.4 * final + 0.4 * hw_sum / hw_count);
     }
 
-    // output the results
+    // write the results
     for (vec_sz i = 0; i < students.size(); ++i)
         cout << "Student " << students[i] << "'s Final Grade: " <<
             grades[i] << "." << endl;

@@ -67,7 +67,7 @@ int main()
     resizing_extract_fails(students_copy);
     double time_modified = clock() - begin;
 
-    // output the results
+    // write the results
     cout << "Original function took " << time_original / CLOCKS_PER_SEC
         << " seconds and the modified function took " << time_modified / 
         CLOCKS_PER_SEC << " seconds for " << count << " students." << endl;

@@ -45,14 +45,20 @@ int main()
             }
         }
 
-    // output the results
-    cout << "The words that have ascenders or descenders are: ";
-    for (vector<string>::const_iterator it = words.begin();
-        it != words.end() - 1; ++it)
-        cout << *it << ", ";
-    // output the last word
-    cout << *(words.end() - 1) << "." << endl << endl;
-    cout << "The longest word that does not have ascenders or "
+    // write the first word
+    vector<string>::const_iterator it = words.begin();
+    cout << "The word(s) that have ascenders or descenders are: "
+         << *it;
+
+    ++it;
+    // write the rest of the words, if any
+    while (it != words.end()) {
+        cout << ", " << *it;
+        ++it;
+    }
+
+    // write the result
+    cout << endl << "The longest word that does not have ascenders or "
         "descenders is \"" << longest_word << "\" with " << max_length
         << " letters." << endl;
 

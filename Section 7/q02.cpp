@@ -43,19 +43,27 @@ int main()
         else if (it->final_grade > 60)
             grades["D"].push_back(*it);
         else
-            grades["B"].push_back(*it);
+            grades["F"].push_back(*it);
     }
 
     for (map<string, vector<Student_info> >::const_iterator it = grades.begin();
         it != grades.end(); ++it) {
-        cout << "Students who got " << (it->first == "A" || it->first == "F"
-        ? "an " : "a ") << it->first << " are:\t";
-        for (vector<Student_info>::const_iterator jt = it->second.begin();
-            jt != it->second.end() - 1; ++jt) {
-            cout << jt->name << ", ";
+        // write the grade
+        cout << "The student(s) who got " << (it->first == "A" || it->first == "F"
+        ? "an " : "a ") << it->first << " are: ";
+        
+        // followed by one or more student names
+        vector<Student_info>::const_iterator student_it = it->second.begin();
+        cout << student_it->name; // write the first student name
+
+        ++student_it;
+        // write the rest of the student names, if any
+        while (student_it != it->second.end()) {
+            cout << ", " << student_it->name;
+            ++student_it;
         }
-        // write the last student's name without a comma
-        cout << (it->second.end() - 1)->name << endl;
+        // write a new line to separate each student name from the next
+        cout << endl;
     }
     
     return 0;

@@ -21,7 +21,7 @@ int main()
     // concatenate all elements
     string concatenated_words = accumulate(words.begin(), words.end(), string());
 
-    // output the result
+    // write the result
     cout << "The result of concatenation is: " << concatenated_words << endl;
 
     return 0;

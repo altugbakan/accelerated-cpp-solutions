@@ -11,7 +11,7 @@ int main()
     vector<string> v;
     frame(v);
 
-    // output the frame
+    // write the frame
     for (vector<string>::const_iterator it = v.begin();
         it != v.end(); ++it)
         cout << *it << endl;

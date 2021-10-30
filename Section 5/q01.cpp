@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <list>
+#include <string>
+#include <algorithm>
 #include "Rotation.h"
 
 using std::string;
@@ -42,7 +47,7 @@ int main()
     // sort and format the permutations
     sort(rotations.begin(), rotations.end(), compare);
 
-    // output the results
+    // write the results
     string::size_type max_width = first_width(rotations);
     for (vector<Rotation>::iterator it = rotations.begin();
         it != rotations.end(); ++it)

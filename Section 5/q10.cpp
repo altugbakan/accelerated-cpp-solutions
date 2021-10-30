@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdexcept>
 #include <vector>
 #include <string>
 
@@ -7,6 +8,7 @@ using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
+using std::domain_error;
 
 bool is_palindrome(string s)
 {
@@ -37,14 +39,23 @@ int main()
             }
         }
 
-    // output the results
-    cout << "The palindromes are: ";
-    for (vector<string>::const_iterator it = palindromes.begin();
-        it != palindromes.end() - 1; ++it)
-        cout << *it << ", ";
-    // output the last palindrome
-    cout << *(palindromes.end() - 1) << "." << endl << endl;
-    cout << "The longest palindrome is \"" << longest_word
+    // check if there are any palindromes
+    if (palindromes.size() == 0) {
+        throw domain_error("no palindromes found");
+    }
+
+    // write the first palindrome
+    vector<string>::const_iterator it = palindromes.begin();
+    cout << "The palindrome(s) are: " << *it;
+
+    ++it;
+    // write the rest of the palindromes, if any
+    while (it != palindromes.end()) {
+        cout << ", " << *it;
+        ++it;
+    }
+    // write the result
+    cout << endl << endl << "The longest palindrome is \"" << longest_word
         << "\" with " << max_length << " letters." << endl;
 
     return 0;

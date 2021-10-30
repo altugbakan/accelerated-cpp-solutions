@@ -23,7 +23,7 @@ int main()
     copy(u.begin(), u.end(), back_inserter(v));
     double end_back = clock();
 
-    // output the results
+    // write the results
     cout << "copying took " << (end_copy - begin_copy) /
         CLOCKS_PER_SEC << " seconds for " << u.size() << " items.";
 
