@@ -18,9 +18,9 @@ int main()
 
     // output the results
     cout << "Found URLs are: " << endl;
-    for (vector<string>::const_iterator i = urls.begin();
-        i != urls.end(); ++i)
-        cout << *i << endl;
+    for (vector<string>::const_iterator it = urls.begin();
+        it != urls.end(); ++it)
+        cout << *it << endl;
 
     return 0;
 }

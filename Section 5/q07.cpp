@@ -12,9 +12,9 @@ int main()
     frame(v);
 
     // output the frame
-    for (vector<string>::const_iterator i = v.begin();
-        i != v.end(); ++i)
-        cout << *i << endl;
+    for (vector<string>::const_iterator it = v.begin();
+        it != v.end(); ++it)
+        cout << *it << endl;
     
     return 0;
 }

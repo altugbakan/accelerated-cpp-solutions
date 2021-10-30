@@ -39,9 +39,9 @@ int main()
 
     // output the results
     cout << "The palindromes are: ";
-    for (vector<string>::const_iterator i = palindromes.begin();
-        i != palindromes.end() - 1; ++i)
-        cout << *i << ", ";
+    for (vector<string>::const_iterator it = palindromes.begin();
+        it != palindromes.end() - 1; ++it)
+        cout << *it << ", ";
     // output the last palindrome
     cout << *(palindromes.end() - 1) << "." << endl << endl;
     cout << "The longest palindrome is \"" << longest_word

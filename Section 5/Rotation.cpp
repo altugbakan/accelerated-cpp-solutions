@@ -66,11 +66,11 @@ str_sz first_width(const vector<Rotation>& rotations)
 {
     str_sz longest = 0;
     // invariant: we have processed i rotations
-    for (vector<Rotation>::const_iterator i = rotations.begin();
-        i != rotations.end(); ++i)
+    for (vector<Rotation>::const_iterator it = rotations.begin();
+        it != rotations.end(); ++it)
         // if words are ordered originally
-        if (i->start == 1)
-            longest = max(longest, first_width(*i));
+        if (it->start == 1)
+            longest = max(longest, first_width(*it));
 
     return longest;
 }

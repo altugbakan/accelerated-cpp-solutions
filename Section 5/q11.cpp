@@ -18,9 +18,9 @@ bool is_ascender_or_descender(char c)
 bool has_ascender_or_descender(string s)
 {
     // search all characters
-    for (string::const_iterator i = s.begin();
-        i != s.end(); ++i)
-        if (is_ascender_or_descender(*i))
+    for (string::const_iterator it = s.begin();
+        it != s.end(); ++it)
+        if (is_ascender_or_descender(*it))
             return true;
     
     return false;
@@ -47,9 +47,9 @@ int main()
 
     // output the results
     cout << "The words that have ascenders or descenders are: ";
-    for (vector<string>::const_iterator i = words.begin();
-        i != words.end() - 1; ++i)
-        cout << *i << ", ";
+    for (vector<string>::const_iterator it = words.begin();
+        it != words.end() - 1; ++it)
+        cout << *it << ", ";
     // output the last word
     cout << *(words.end() - 1) << "." << endl << endl;
     cout << "The longest word that does not have ascenders or "

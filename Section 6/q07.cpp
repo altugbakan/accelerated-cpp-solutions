@@ -11,14 +11,14 @@ using std::endl;
 vector<Student_info> extract_didnt(vector<Student_info>& students)
 {
     vector<Student_info> didnt;
-    vector<Student_info>::iterator iter = students.begin();
+    vector<Student_info>::iterator it = students.begin();
 
-    while (iter != students.end()) {
-        if (!did_all_hw(*iter)) {
-            didnt.push_back(*iter);
-            iter = students.erase(iter);
+    while (it != students.end()) {
+        if (!did_all_hw(*it)) {
+            didnt.push_back(*it);
+            it = students.erase(it);
         } else
-            ++iter;
+            ++it;
     }
     return didnt;
 }
@@ -37,15 +37,15 @@ int main()
 
     // output the results
     cout << "Students who did all their homework are: ";
-    for (vector<Student_info>::const_iterator i = students.begin();
-        i != students.end(); ++i)
-        cout << i->name << (i + 1 == students.end() ? "." : ", ");
+    for (vector<Student_info>::const_iterator it = students.begin();
+        it != students.end(); ++it)
+        cout << it->name << (it + 1 == students.end() ? "." : ", ");
     cout << endl;
 
     cout << "Students who did not do all their homework are: ";
-    for (vector<Student_info>::const_iterator i = didnt.begin();
-        i != didnt.end(); ++i)
-        cout << i->name << (i + 1 == didnt.end() ? "." : ", ");
+    for (vector<Student_info>::const_iterator it = didnt.begin();
+        it != didnt.end(); ++it)
+        cout << it->name << (it + 1 == didnt.end() ? "." : ", ");
     cout << endl;
 
     return 0;

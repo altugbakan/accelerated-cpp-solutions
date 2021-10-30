@@ -32,30 +32,30 @@ int main()
 
     // assign letter grades
     map<string, vector<Student_info> > grades;
-    for (vector<Student_info>::const_iterator i = students.begin();
-        i != students.end(); ++i) {
-        if (i->final_grade > 90)
-            grades["A"].push_back(*i);
-        else if (i->final_grade > 80)
-            grades["B"].push_back(*i);
-        else if (i->final_grade > 70)
-            grades["C"].push_back(*i);
-        else if (i->final_grade > 60)
-            grades["D"].push_back(*i);
+    for (vector<Student_info>::const_iterator it = students.begin();
+        it != students.end(); ++it) {
+        if (it->final_grade > 90)
+            grades["A"].push_back(*it);
+        else if (it->final_grade > 80)
+            grades["B"].push_back(*it);
+        else if (it->final_grade > 70)
+            grades["C"].push_back(*it);
+        else if (it->final_grade > 60)
+            grades["D"].push_back(*it);
         else
-            grades["B"].push_back(*i);
+            grades["B"].push_back(*it);
     }
 
-    for (map<string, vector<Student_info> >::const_iterator i = grades.begin();
-        i != grades.end(); ++i) {
-        cout << "Students who got " << (i->first == "A" || i->first == "F"
-        ? "an " : "a ") << i->first << " are:\t";
-        for (vector<Student_info>::const_iterator it = i->second.begin();
-            it != i->second.end() - 1; ++it) {
-            cout << it->name << ", ";
+    for (map<string, vector<Student_info> >::const_iterator it = grades.begin();
+        it != grades.end(); ++it) {
+        cout << "Students who got " << (it->first == "A" || it->first == "F"
+        ? "an " : "a ") << it->first << " are:\t";
+        for (vector<Student_info>::const_iterator jt = it->second.begin();
+            jt != it->second.end() - 1; ++jt) {
+            cout << jt->name << ", ";
         }
         // write the last student's name without a comma
-        cout << (i->second.end() - 1)->name << endl;
+        cout << (it->second.end() - 1)->name << endl;
     }
     return 0;
 }

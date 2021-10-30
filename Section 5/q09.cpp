@@ -12,9 +12,9 @@ using std::isupper;
 
 bool is_all_lower(string word)
 {
-    for (string::const_iterator i = word.begin();
-        i != word.end(); ++i)
-        if (isupper(*i))
+    for (string::const_iterator it = word.begin();
+        it != word.end(); ++it)
+        if (isupper(*it))
             return false;
     return true;
 }
@@ -32,12 +32,12 @@ int main()
             upper.push_back(word);
     
     // output all lowercase words
-    for (list<string>::const_iterator i = lower.begin();
-        i != lower.end(); ++i)
-        cout << *i << " ";
+    for (list<string>::const_iterator it = lower.begin();
+        it != lower.end(); ++it)
+        cout << *it << " ";
     
     // output words that contain uppercase
-    for (list<string>::const_iterator i = upper.begin();
-        i != upper.end(); ++i)
-        cout << *i << " ";
+    for (list<string>::const_iterator it = upper.begin();
+        it != upper.end(); ++it)
+        cout << *it << " ";
 }

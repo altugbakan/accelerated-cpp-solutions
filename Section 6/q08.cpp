@@ -42,15 +42,15 @@ int main()
 
     // output the results
     cout << "Students who passed the class are: ";
-    for (vector<Student_info>::const_iterator i = students.begin();
-        i != students.end(); ++i)
-        cout << i->name << (i + 1 == students.end() ? "." : ", ");
+    for (vector<Student_info>::const_iterator it = students.begin();
+        it != students.end(); ++it)
+        cout << it->name << (it + 1 == students.end() ? "." : ", ");
     cout << endl;
 
     cout << "Students who failed the class are: ";
-    for (vector<Student_info>::const_iterator i = fails.begin();
-        i != fails.end(); ++i)
-        cout << i->name << (i + 1 == fails.end() ? "." : ", ");
+    for (vector<Student_info>::const_iterator it = fails.begin();
+        it != fails.end(); ++it)
+        cout << it->name << (it + 1 == fails.end() ? "." : ", ");
     cout << endl;
 
     return 0;
