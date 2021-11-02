@@ -21,6 +21,7 @@ The extended program can be found in [q02.cpp](./q02.cpp). After reading the gra
 The program can be found in [q03.cpp](./q03.cpp). Before inserting the `line_number` into the specified word's `vector<int>`, it tries to find if the said number is already included in the `vector<int>` using `find`.
 
 ### Q4: The output produced by the cross-reference program will be ungainly if the input file is large. Rewrite the program to break up the output if the lines get too long.
+The program can be found in [q04.cpp](./q04.cpp). It breaks up the output after printing 15 line numbers for each row.
 
 ### Q5: Reimplement the grammar problem using a `list` as the data structure in which we build the sentence.
 
