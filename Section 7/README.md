@@ -24,6 +24,7 @@ The program can be found in [q03.cpp](./q03.cpp). Before inserting the `line_num
 The program can be found in [q04.cpp](./q04.cpp). It breaks up the output after printing 15 line numbers for each row.
 
 ### Q5: Reimplement the grammar problem using a `list` as the data structure in which we build the sentence.
+The program can be found in [q05.cpp](./q05.cpp). It increments the `const_iterator` in a loop to select a random element from the `list`.
 
 ### Q6: Reimplement the `gen_sentence` program using two `vector`s: One will hold the fully unwound, generated sentence, and the other will hold the rules and will be used as a stack. Do not use any recursive calls.
 
