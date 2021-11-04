@@ -27,9 +27,13 @@ The program can be found in [q04.cpp](./q04.cpp). It breaks up the output after 
 The program can be found in [q05.cpp](./q05.cpp). It increments the `const_iterator` in a loop to select a random element from the `list`.
 
 ### Q6: Reimplement the `gen_sentence` program using two `vector`s: One will hold the fully unwound, generated sentence, and the other will hold the rules and will be used as a stack. Do not use any recursive calls.
+The program can be found in [q06.cpp](./q06.cpp). It puts generated bracketed words in the `rules` vector and the generated words in the `sentence` vector.
 
 ### Q7: Change the driver for the cross-reference program so that it writes `line` if there is only one line and `lines` otherwise.
+The program can be found in [q07.cpp](./q07.cpp). Using the ternary operator, we can cout `line` or `lines` in their respective conditions.
 
 ### Q8: Change the cross-reference program to find all the URLs in a file, and write all the lines on which each distinct URL occurs.
+The program can be found in [q08.cpp](./q08.cpp). Using `find_urls` instead of `split` finds all URLs in the provided file.
 
 ### Q9: (difficult) The implementation of `nrand` in §7.4.4/135 will not work for arguments greater than `RAND_MAX`. Usually, this restriction is no problem, because `RAND_MAX` is often the largest possible integer anyway. Nevertheless, there are implementations under which `RAND_MAX` is much smaller than the largest possible integer. For example, it is not uncommon for `RAND_MAX` to be `32767` (2<sup>15</sup> - 1) and the largest possible integer to be `2147483647` (2<sup>31</sup> - 1). Reimplement `nrand` so that it works well for all values of `n`.
+The program can be found in [q09.cpp](./q09.cpp). It first calculates the amount of buckets for numbers larger than `RAND_MAX` and calculates a random number for each bucket. The last bucket will have a random number between `[0, n % RAND_MAX`) and other buckets will have a random number between `[0, RAND_MAX]`.
