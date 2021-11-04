@@ -103,7 +103,7 @@ gen_aux(const Grammar& g, const string& word, list<string>& ret)
         // fetch the set of possible rules
         const Rule_collection& c = it->second;
 
-        // increment c nrand times
+        // get the nrand'th element of c
         int rand = nrand(c.size());
         Rule_collection::const_iterator rule_it = c.begin();
         for (int i = 0; i < rand; ++i)
