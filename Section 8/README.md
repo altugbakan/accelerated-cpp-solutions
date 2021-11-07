@@ -1,8 +1,10 @@
 ## Questions and Solutions
 
 ### Q0: Compile, execute, and test the programs in this chapter.
+The programs in this chapter are compiled and tested. The programs can be found in the book.
 
 ### Q1: Note that the various `analysis` functions we wrote in §6.2/110 share the same behavior; they differ only in terms of the functions they call to calculate the final grade. Write a template function, parametrized by the type of the grading function, and use that function to evaluate the grading schemes.
+The program can be found in [q01.cpp](./q01.cpp). `analysis_tmp` and `write_analysis_tmp` functions use templates parametrized by the type of the grading function. `write_analysis_tmp` is used to evaluate the grading schemes.
 
 ### Q2: Implement the following library algorithms, which we used in Chapter 6 and described in §6.5/121. Specify what kinds of iterators they require. Try to minimize the number of distinct iterator operations that each function requires. After you have finished your implementation, see §B.3/322 to see how well you did.
 ```
@@ -13,6 +15,7 @@ remove_copy_if(b, e, d, p)  remove(b, e, t)
 transform(b, e, d, f)       partition(b, e, p)
 accumulate(b, e, t)
 ```
+The implementations can be found in [q02.cpp](./q02.cpp). Iterators are specified when naming the templates. A sample driver program for `partition` can also be found in [q02.cpp](./q02.cpp).
 
 ### Q3: As we learned in §4.1.4/58, it can be expensive to return (or pass) a container by value. Yet the `median` function we wrote in §8.1.1/140 passes the `vector` by value. Could we rewrite the `median` function to operate on iterators instead of passing the `vector`? If we did so, what would you expect the performance impact to be?
 
