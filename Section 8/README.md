@@ -18,6 +18,7 @@ accumulate(b, e, t)
 The implementations can be found in [q02.cpp](./q02.cpp). Iterators are specified when naming the templates. A sample driver program for `partition` can also be found in [q02.cpp](./q02.cpp).
 
 ### Q3: As we learned in §4.1.4/58, it can be expensive to return (or pass) a container by value. Yet the `median` function we wrote in §8.1.1/140 passes the `vector` by value. Could we rewrite the `median` function to operate on iterators instead of passing the `vector`? If we did so, what would you expect the performance impact to be?
+The `median` function that operates on iterators can be found in [q03.cpp](./q03.cpp). The return type is set as a `double` to give generic results for numeric types. `Random-access iterator`s are used to find the `size` and `mid` of the iterators.
 
 ### Q4: Implement the `swap` function that we used in §8.2.5/148. Why did we call `swap` rather than exchange the values of `*beg` and `*end` directly? *Hint:* Try it and see.
 
