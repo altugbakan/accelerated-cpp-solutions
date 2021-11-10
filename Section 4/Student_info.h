@@ -1,7 +1,6 @@
 #ifndef GUARD_Student_info
 #define Guard_Student_info
 
-#include <iostream>
 #include <vector>
 #include <string>
 

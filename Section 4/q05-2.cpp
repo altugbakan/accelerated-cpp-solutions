@@ -1,13 +1,16 @@
-#include "read_words.h"
+#include <iostream>
+#include <vector>
+#include <string>
 #include <algorithm>
+#include "read_words.h"
 
 // program that counts how many times each word occured
 
 using std::cin;
 using std::cout;
+using std::endl;
 using std::vector;
 using std::string;
-using std::endl;
 using std::sort;
 
 typedef vector<string>::size_type vec_sz;
