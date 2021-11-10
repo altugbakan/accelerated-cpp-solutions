@@ -91,12 +91,12 @@ int nrand(int n)
     return r;
 }
 
-template <class OutputIterator>
+template <class Out>
 void
-gen_aux(const Grammar& g, const string& word, OutputIterator out)
+gen_aux(const Grammar& g, const string& word, Out os)
 {
     if (!bracketed(word))
-        *out++ = word; // write results to output iterator
+        *os++ = word; // write results to output iterator
     else {
         // locate the rule that corresponds to word
         Grammar::const_iterator it = g.find(word);
@@ -117,14 +117,14 @@ gen_aux(const Grammar& g, const string& word, OutputIterator out)
 
         // recursively expand the selected rule
         for (Rule::const_iterator i = r.begin(); i != r.end(); ++i)
-            gen_aux(g, *i, out);
+            gen_aux(g, *i, os);
     }
 }
 
-template <class OutputIterator>
-void gen_sentence(const Grammar& g, OutputIterator out)
+template <class Out>
+void gen_sentence(const Grammar& g, Out os)
 {
-    gen_aux(g, "<sentence>", out);
+    gen_aux(g, "<sentence>", os);
 }
 
 int main()

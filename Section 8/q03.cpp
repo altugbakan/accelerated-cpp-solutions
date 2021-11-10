@@ -8,8 +8,8 @@ using std::endl;
 using std::vector;
 using std::domain_error;
 
-template <class RandomAccessIterator>
-double median(RandomAccessIterator b, RandomAccessIterator e)
+template <class Ran>
+double median(Ran b, Ran e)
 {
     size_t size = e - b;
     if (size == 0)

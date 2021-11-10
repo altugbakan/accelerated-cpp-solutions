@@ -15,8 +15,8 @@ using std::istream;
 using std::find;
 
 // find all the lines that refer to each word in the input
-template <class OutputIterator>
-void xref(istream& in, OutputIterator out,
+template <class Out>
+void xref(istream& in, Out os,
     vector<string> find_words(const string&) = split)
 {
     string line;
@@ -42,7 +42,7 @@ void xref(istream& in, OutputIterator out,
     // write results to output iterator
     for (map<string, vector<int> >::const_iterator it = ret.begin();
         it != ret.end(); ++it) {
-        *out = *it;
+        *os = *it;
     }
 }
 

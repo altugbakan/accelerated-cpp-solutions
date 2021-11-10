@@ -5,8 +5,8 @@ using std::cout;
 using std::endl;
 using std::vector;
 
-template <class ForwardIterator1, class ForwardIterator2>
-bool equal(ForwardIterator1 b, ForwardIterator1 e, ForwardIterator2 b2)
+template <class For1, class For2>
+bool equal(For1 b, For1 e, For2 b2)
 {
     while (b != e) {
         if (*b != *b2)
@@ -16,13 +16,12 @@ bool equal(ForwardIterator1 b, ForwardIterator1 e, ForwardIterator2 b2)
     return true;
 }
 
-template <class ForwardIterator1, class ForwardIterator2>
-ForwardIterator1 search(ForwardIterator1 b, ForwardIterator1 e,
-                      ForwardIterator2 b2, ForwardIterator2 e2)
+template <class For1, class For2>
+For1 search(For1 b, For1 e, For2 b2, For2 e2)
 {
     while (b != e) {
-        ForwardIterator1 bi = b;
-        ForwardIterator2 b2i = b2;
+        For1 bi = b;
+        For2 b2i = b2;
         while (*bi == *b2i) {
             ++bi; ++b2i;
             if (b2i == e2)
@@ -35,8 +34,8 @@ ForwardIterator1 search(ForwardIterator1 b, ForwardIterator1 e,
     return e;
 }
 
-template <class InputIterator, class T>
-InputIterator find(InputIterator b, InputIterator e, const T& t)
+template <class In, class T>
+In find(In b, In e, const T& t)
 {
     while (b != e) {
         if (*b == t)
@@ -46,8 +45,8 @@ InputIterator find(InputIterator b, InputIterator e, const T& t)
     return e;
 }
 
-template <class InputIterator, class Predicate>
-InputIterator find_if(InputIterator b, InputIterator e, Predicate p)
+template <class In, class Pred>
+In find_if(In b, In e, Pred p)
 {
     while (b != e) {
         if (p(*b))
@@ -58,8 +57,8 @@ InputIterator find_if(InputIterator b, InputIterator e, Predicate p)
 }
 
 
-template <class InputIterator, class OutputIterator>
-OutputIterator copy(InputIterator b, InputIterator e, OutputIterator d)
+template <class In, class Out>
+Out copy(In b, In e, Out d)
 {
     while (b != e) {
         *d = b;
@@ -68,9 +67,8 @@ OutputIterator copy(InputIterator b, InputIterator e, OutputIterator d)
     return d;
 }
 
-template <class InputIterator, class OutputIterator, class Type>
-OutputIterator remove_copy(InputIterator b, InputIterator e,
-                              OutputIterator d, Type t)
+template <class In, class Out, class T>
+Out remove_copy(In b, In e, Out d, T t)
 {
     while (b != e) {
         if (*b != t) {
@@ -82,9 +80,8 @@ OutputIterator remove_copy(InputIterator b, InputIterator e,
     return d;
 }
 
-template <class InputIterator, class OutputIterator, class Predicate>
-OutputIterator remove_copy_if(InputIterator b, InputIterator e,
-                              OutputIterator d, Predicate p)
+template <class In, class Out, class Pred>
+Out remove_copy_if(In b, In e, Out d, Pred p)
 {
     while (b != e) {
         if (!p(*b)) {
@@ -96,10 +93,10 @@ OutputIterator remove_copy_if(InputIterator b, InputIterator e,
     return d;
 }
 
-template <class ForwardIterator, class Type>
-ForwardIterator remove(ForwardIterator b, ForwardIterator e, Type t)
+template <class For, class T>
+For remove(For b, For e, T t)
 {
-    ForwardIterator i = b;
+    For i = b;
     while (b != e) {
         if (*b != t) {
             *i = *b;
@@ -110,9 +107,8 @@ ForwardIterator remove(ForwardIterator b, ForwardIterator e, Type t)
     return i;
 }
 
-template <class InputIterator, class OutputIterator, class Function>
-OutputIterator transform(InputIterator b, InputIterator e,
-                         OutputIterator d, Function f)
+template <class In, class Out, class Func>
+Out transform(In b, In e, Out d, Func f)
 {
     while (b != e) {
         *d = f(*b);
@@ -121,9 +117,8 @@ OutputIterator transform(InputIterator b, InputIterator e,
     return d;
 }
 
-template <class BidirectionalIterator, class Predicate>
-BidirectionalIterator partition(BidirectionalIterator b, BidirectionalIterator e,
-                                Predicate p)
+template <class Bi, class Pred>
+Bi partition(Bi b, Bi e, Pred p)
 {
     while (b != e) {
         while (p(*b)) {
@@ -136,7 +131,7 @@ BidirectionalIterator partition(BidirectionalIterator b, BidirectionalIterator e
             if (b == e)
                 return b;
         } while (!p(*e));
-        BidirectionalIterator tmp = b;
+        Bi tmp = b;
         *b = *e;
         *e = *tmp;
         ++b;
@@ -144,8 +139,8 @@ BidirectionalIterator partition(BidirectionalIterator b, BidirectionalIterator e
     return b;
 }
 
-template <class InputIterator, class Type>
-Type accumulate(InputIterator b, InputIterator e, Type t)
+template <class In, class T>
+T accumulate(In b, In e, T t)
 {
     while (b != e) {
         t += *b;
