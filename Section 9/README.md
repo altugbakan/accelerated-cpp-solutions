@@ -1,10 +1,13 @@
 ## Questions and Solutions
 
 ### Q0: Compile, execute, and test the programs in this chapter.
+The programs in this chapter are compiled and tested. The programs can be found in the book.
 
 ### Q1: Reimplement the `Student_info` class so that it calculates the final grade when reading the student's record, and stores that grade in the object. Reimplement the `grade` function to use this precomputed value.
+The reimplementations of `Student_info` and `grade` can be found in [q01.cpp](./q01.cpp). The `grade` function of the `Student_info` now returns the final grade that is stored in the object. The calculation is done in the `read` function.
 
 ### Q2: If we define the `name` function as a plain, non`const` member function, what other functions in our system must change and why?
+If we define the `name` function as a non`const` function, we need to change the `compare` function as it uses `const Student_info&` references.
 
 ### Q3: Our `grade` function was written to throw an exception if a user tried to calculate a grade for a `Student_info` object whose values had not yet been read. Users who care are expected to catch this exception. Write a program that triggers the exception but does not catch it. Write a program that catches the exception.
 
