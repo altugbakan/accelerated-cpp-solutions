@@ -1,5 +1,5 @@
-#ifndef GUARD_Student_info
-#define Guard_Student_info
+#ifndef GUARD_Student_info_pf
+#define Guard_Student_info_pf
 
 #include <vector>
 #include <string>
@@ -9,13 +9,11 @@ public:
     Student_info();
     Student_info(std::istream&);
     std::string name() const { return n; }
-    bool valid() const { return !homework.empty(); }
     std::istream& read(std::istream&);
-    double grade() const;
+    char grade() const;
 private:
     std::string n;
     double midterm, final;
-    std::vector<double> homework;
 };
 
 bool compare(const Student_info&, const Student_info&);

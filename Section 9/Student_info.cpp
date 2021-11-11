@@ -32,8 +32,13 @@ istream& Student_info::read(istream& in)
 {
     in >> n >> midterm >> final;
     read_hw(in, homework);
-    g = ::grade(midterm, final, homework);
     return in;
+}
+
+// code is taken from §9.3.1/158
+double Student_info::grade() const
+{
+    return ::grade(midterm, final, homework);
 }
 
 // code is taken from §9.3.1/162
