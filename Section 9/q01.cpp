@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "Student_info.h"
+#include "Student_info_ex.h"
 
 using std::domain_error;
 using std::setprecision;
@@ -31,7 +31,7 @@ int main()
     // alphabetize the student records
     sort(students.begin(), students.end(), compare);
 
-    // write the names and grades.
+    // write the names and grades
     for (vector<Student_info>::size_type i = 0;
          i != students.size(); ++i) {
         cout << students[i].name()
