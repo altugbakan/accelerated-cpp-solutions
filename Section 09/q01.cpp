@@ -16,6 +16,7 @@ using std::string;
 using std::max;
 using std::streamsize;
 
+// code is taken from §9.6/166
 int main()
 {
     vector<Student_info> students;

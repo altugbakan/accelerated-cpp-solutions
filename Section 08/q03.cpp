@@ -8,8 +8,8 @@ using std::endl;
 using std::vector;
 using std::domain_error;
 
-template <class Ran>
-double median(Ran b, Ran e)
+template <class T, class Ran>
+T median(Ran b, Ran e)
 {
     size_t size = e - b;
     if (size == 0)
@@ -32,7 +32,7 @@ int main()
     vec.push_back(5);
     vec.push_back(4);
 
-    cout << "median is " << median(vec.begin(), vec.end()) << endl;
+    cout << "median is " << median<double>(vec.begin(), vec.end()) << endl;
 
     return 0;
 }

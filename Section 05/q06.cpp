@@ -1,12 +1,13 @@
+#include <iostream>
 #include <vector>
-#include "../Section 4/Student_info.h"
+#include "../Section 04/Student_info.h"
 // ctime is used for code runtime estimation
 #include <ctime>
 
-using std::vector;
-using std::cin;
 using std::cout;
+using std::cin;
 using std::endl;
+using std::vector;
 
 typedef vector<Student_info>::size_type vec_std_sz;
 

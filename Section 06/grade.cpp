@@ -1,7 +1,7 @@
 #include <stdexcept>
 #include <vector>
 #include "grade.h"
-#include "../Section 4/median.h"
+#include "../Section 04/median.h"
 
 using std::domain_error;    using std::vector;
 

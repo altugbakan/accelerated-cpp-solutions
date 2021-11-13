@@ -3,8 +3,8 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "../Section 5/split.h"
-#include "../Section 6/find_urls.h"
+#include "../Section 05/split.h"
+#include "../Section 06/find_urls.h"
 
 using std::map;
 using std::vector;

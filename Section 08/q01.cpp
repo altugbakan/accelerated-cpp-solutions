@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include "../Section 6/Student_info.h"
-#include "../Section 6/median.h"
-#include "../Section 6/grade.h"
-#include "../Section 6/analysis.h"
+#include "../Section 06/Student_info.h"
+#include "../Section 06/median.h"
+#include "../Section 06/grade.h"
+#include "../Section 06/analysis.h"
 
 using std::ostream;
 using std::cout;

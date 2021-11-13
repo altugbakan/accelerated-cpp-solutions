@@ -1,8 +1,9 @@
+#include <iostream>
 #include <vector>
 // ctime is used for code runtime estimation
 #include <ctime>
 // include the simplified version of Student_info
-#include "../Section 4/Student_info.h"
+#include "../Section 04/Student_info.h"
 
 using std::cin;
 using std::cout;

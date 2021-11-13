@@ -6,7 +6,7 @@
 #include <map>
 #include <vector>
 #include <string>
-#include "../Section 4/Student_info.h" // using the simplifed version
+#include "../Section 04/Student_info.h" // using the simplifed version
 
 using std::cin;                             using std::setprecision;
 using std::cout;                            using std::sort;
