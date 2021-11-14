@@ -13,7 +13,10 @@ The rewritten `median` function can be found in [q02.cpp](./q02.cpp). It allows 
 The test program can be found in [q03.cpp](./q03.cpp). It is shown that calling `median` does not change the order of the elements in the container.
 
 ### Q4: Write a class that implements a list that holds `string`s.
+The `String_list` class implementation can be found in [String_list.cpp](./String_list.cpp). The driver program can be found in [q04.cpp](./q04.cpp).
 
 ### Q5: Write a bidirectional iterator for your `String_list` class.
+The bidirectional iterator is added to [String_list.h](./String_list.h). It is simply a `typedef` for the `string` pointer. The driver program can be found in [q05.cpp](./q05.cpp).
 
 ### Q6: Test the class by rewriting the `split` function to put its output into a `String_list`.
+The rewritten `split` function can be found in [split.cpp](./q02.cpp). The driver program can be found in [q06.cpp](./q06.cpp).
