@@ -1,9 +1,11 @@
 #include <stdexcept>
+#include <vector>
 #include <algorithm>
 #include "median.h"
 
-using std::vector;
 using std::domain_error;
+using std::vector;
+using std::sort;
 
 // code is taken from §4.1.1/53
 // compute the median of a vector<double>

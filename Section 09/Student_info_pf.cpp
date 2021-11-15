@@ -1,8 +1,6 @@
 #include <iostream>
-#include <vector>
 #include "Student_info_pf.h"
 
-using std::vector;
 using std::istream;
 
 Student_info::Student_info(): midterm(0), final(0) { }

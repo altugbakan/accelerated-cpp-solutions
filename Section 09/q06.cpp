@@ -15,6 +15,7 @@ using std::vector;
 using std::string;
 using std::max;
 using std::streamsize;
+using std::sort;
 
 int main()
 {

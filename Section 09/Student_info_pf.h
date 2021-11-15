@@ -1,7 +1,6 @@
-#ifndef GUARD_Student_info_pf
-#define Guard_Student_info_pf
+#ifndef GUARD_Student_info
+#define GUARD_Student_info
 
-#include <vector>
 #include <string>
 
 class Student_info {

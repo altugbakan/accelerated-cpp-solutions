@@ -15,6 +15,7 @@ using std::vector;
 using std::string;
 using std::max;
 using std::streamsize;
+using std::sort;
 
 // code is taken from §9.6/166
 int main()
