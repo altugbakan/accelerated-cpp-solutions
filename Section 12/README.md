@@ -1,16 +1,21 @@
 ## Questions and Solutions
 
 ### Q0: Compile, execute, and test the programs in this chapter.
+The programs in this chapter are compiled and tested. The programs can be found in the book.
 
 ### Q1: Reimplement the `Str` class, but choose an implementation strategy that the class manage the storage itself. For example, you might store an array of `char` and a length. Consider what implications this change in design has for copy control. Also consider the cost of using `Vec`, (e.g., in storage overhead).
-
+The reimplemented `Str` class can be found in [Str.h](./Str.h). The driver program can be found in [q01.cpp](./q01.cpp).
 ### Q2: Implement the `c_str`, `data`, and `copy` functions.
+The implemented functions are added to [Str.h](./Str.h). The driver program can be found in [q02.cpp](./q02.cpp).
 
 ### Q3: Define the relational operators for `Str`. In doing so, you will want to know that the `<cstring>` header defines a function called `strcmp`, which compares two character pointers. The function returns a negative integer if the null-terminated character array denoted by the first pointer is less than the second, zero if the two strings are equal, or a positive value if the first string is greater than the second.
+The relational operators are added to [Str.h](./Str.h). The driver program can be found in [q03.cpp](./q03.cpp).
 
 ### Q4: Define the equality and inequality operators for `Str`.
+The equality and inequality operators are added to [Str.h](./Str.h). The driver program can be found in [q04.cpp](./q04.cpp).
 
 ### Q5: Implement concatenation for `Str` so as not to rely on conversions from `const char*`.
+Concatenation is added to [Str.h](./Str.h). The driver program can be found in [q05.cpp](./q05.cpp).
 
 ### Q6: Give `Str` an operation that will let us implicitly use a `Str` object as a condition. The test should fail if `Str` is empty, and succeed otherwise.
 
