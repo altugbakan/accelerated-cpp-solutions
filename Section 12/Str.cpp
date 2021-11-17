@@ -1,14 +1,17 @@
 #include <iostream>
+#include <iterator>
 #include <cstring>
 #include "Str.h"
 
 using std::ostream;
 using std::istream;
+using std::ostream_iterator;
+using std::copy;
 
+// Q9
 ostream& operator<<(ostream& os, const Str& s)
 {
-    for (Str::size_type i = 0; i != s.size(); ++i)
-        os << s[i];
+    copy(s.begin(), s.end(), ostream_iterator<char>(os));
     return os;
 }
 
@@ -51,6 +54,14 @@ Str operator+(const Str& s, const char* t)
     return r;
 }
 
+// Q11
+Str operator+(const char* t, const Str& s)
+{
+    Str r(t);
+    r += s;
+    return r;
+}
+
 // Q3
 bool operator<(const Str& lhs, const Str& rhs)
 {
@@ -85,4 +96,15 @@ bool operator==(const Str& lhs, const Str& rhs)
 bool operator!=(const Str& lhs, const Str& rhs)
 {
     return strcmp(lhs.c_str(), rhs.c_str()) != 0;
+}
+
+// Q8
+istream& getline(istream& is, Str& s)
+{
+    // read until newline
+    char c;
+    while (is.get(c) && c != '\n')
+        s += c;
+
+    return is;
 }

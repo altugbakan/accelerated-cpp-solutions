@@ -18,16 +18,22 @@ The equality and inequality operators are added to [Str.h](./Str.h). The driver 
 Concatenation is added to [Str.h](./Str.h). The driver program can be found in [q05.cpp](./q05.cpp).
 
 ### Q6: Give `Str` an operation that will let us implicitly use a `Str` object as a condition. The test should fail if `Str` is empty, and succeed otherwise.
+`operator bool()` is added to [Str.h](./Str.h). The driver program can be found in [q06.cpp](./q06.cpp).
 
 ### Q7: The standard `string` class provides random-access iterators to manipulate the `string`'s characters. Add iterators and the iterator operations `begin` and `end` to your `Str` class.
+Iterators are added to [Str.h](./Str.h). The driver program can be found in [q07.cpp](./q07.cpp).
 
 ### Q8: Add the `getline` function to the `Str` class.
+`getline` is added to [Str.h](./Str.h). The driver program can be found in [q08.cpp](./q08.cpp).
 
-### Q9: Use class `ostream_iterator` to reimplement the `Str` output operator. Why didn't we ask you to reimplement the input operator using class `input_iterator`?
+### Q9: Use class `ostream_iterator` to reimplement the `Str` output operator. Why didn't we ask you to reimplement the input operator using class `istream_iterator`?
+The output operator is reimplemented using `ostream_iterator` in [Str.cpp](./Str.cpp). The driver program can be found in [q09.cpp](./q09.cpp). Reimplementing the input operator using `istream_iterator` is not feasible, as we are checking for white spaces while getting data from an input stream. 
 
 ### Q10: Having seen in §12.1/212 how `Str` defined a constructor that takes a pair of iterators, we can imagine that such a constructor would be useful in class `Vec`. Add this constructor to `Vec`, and reimplement `Str` to use the `Vec` constructor instead of calling `copy`.
+The constructor that takes a pair of iterators is added to [Vec.h](./Vec.h). The updated `Str` constructor can be found in [Str_Vec.h](./Str_Vec.h). The driver program can be found in [q10.cpp](./q10.cpp).
 
 ### Q11: If you add the operations listed in these exercises, then you can use this `Str` class in all the examples in this book. Reimplement the operations on character pictures from Chapter 5 and the `split` functions from §5.6/87 and §6.1.1/103.
+The reimplemented operations can be found in [q11.cpp](./q11.cpp). Some required operators are added to [Str.h](./Str.h).
 
 ### Q12: Define the `insert` function that takes two iterators for the `Vec` and `Str` classes.
 
