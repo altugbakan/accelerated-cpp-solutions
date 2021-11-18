@@ -24,7 +24,7 @@ Concatenation is added to [Str.h](./Str.h). The driver program can be found in [
 Iterators are added to [Str.h](./Str.h). The driver program can be found in [q07.cpp](./q07.cpp).
 
 ### Q8: Add the `getline` function to the `Str` class.
-`getline` is added to [Str.h](./Str.h). The driver program can be found in [q08.cpp](./q08.cpp).
+`getline` function is added to [Str.h](./Str.h). The driver program can be found in [q08.cpp](./q08.cpp).
 
 ### Q9: Use class `ostream_iterator` to reimplement the `Str` output operator. Why didn't we ask you to reimplement the input operator using class `istream_iterator`?
 The output operator is reimplemented using `ostream_iterator` in [Str.cpp](./Str.cpp). The driver program can be found in [q09.cpp](./q09.cpp). Reimplementing the input operator using `istream_iterator` is not feasible, as we are checking for white spaces while getting data from an input stream. 
@@ -33,12 +33,16 @@ The output operator is reimplemented using `ostream_iterator` in [Str.cpp](./Str
 The constructor that takes a pair of iterators is added to [Vec.h](./Vec.h). The updated `Str` constructor can be found in [Str_Vec.h](./Str_Vec.h). The driver program can be found in [q10.cpp](./q10.cpp).
 
 ### Q11: If you add the operations listed in these exercises, then you can use this `Str` class in all the examples in this book. Reimplement the operations on character pictures from Chapter 5 and the `split` functions from §5.6/87 and §6.1.1/103.
-The reimplemented operations can be found in [q11.cpp](./q11.cpp). Some required operators are added to [Str.h](./Str.h).
+The reimplemented operations can be found in [q11.cpp](./q11.cpp). Some required operators are added to [Str.h](./Str.h). The driver program can be found in [q11.cpp](./q11.cpp).
 
 ### Q12: Define the `insert` function that takes two iterators for the `Vec` and `Str` classes.
+`insert` function is added to [Vec.h](./Vec.h) and [Str_Vec.h](./Str_Vec.h). The driver program can be found in [q12.cpp](./q12.cpp).
 
 ### Q13: Provide an `assign` function that could be used to assign the values in an array to a `Vec`.
+`insert` function is added to [Vec.h](./Vec.h). The driver program can be found in [q13.cpp](./q13.cpp).
 
 ### Q14: Write a program to initialize a `Vec` from a `string`.
+The driver program can be found in [q14.cpp](./q14.cpp). An overload of the `create` function is added to [Vec.h](./Vec.h).
 
 ### Q15: The `read_hw` function from §4.1.3/57 checked the stream from which it read to determine whether the function had hit end-of-file, or had encountered an invalid input. Our `Str` input operator does no such check. Why? Will it leave the stream in an invalid state?
+Our `Str` input operator checks the state of the `istream` using `if(is)`, which corresponds to checking for end-of-file. However, it leaves the stream in an invalid state, which can be observed in [q15.cpp](./q15.cpp).

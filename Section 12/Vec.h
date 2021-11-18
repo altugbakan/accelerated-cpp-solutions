@@ -18,8 +18,7 @@ public:
     Vec& operator=(const Vec&);
     ~Vec() { uncreate(); }
 
-    // Q10
-    template <class In> Vec(In b, In e) { create(b, e); }
+    template <class In> Vec(In b, In e) { create(b, e); } // Q10
 
     T& operator[](size_type i) { return data[i]; }
     const T& operator[](size_type i) const { return data[i]; }
@@ -39,9 +38,13 @@ public:
     const_iterator end() const { return avail; }
 
     void clear() { uncreate(); }
-    iterator erase (iterator);
-    iterator erase (iterator, iterator);
+    iterator erase(iterator);
+    iterator erase(iterator, iterator);
     bool empty() const { return data == avail; }
+
+    template <class In> iterator insert(iterator, In, In); // Q12
+
+    void assign(iterator, iterator); // Q13
 
 private:
     iterator data;  // first element in the Vec
@@ -55,6 +58,7 @@ private:
     void create();
     void create(size_type, const T&);
     void create(const_iterator, const_iterator);
+    template <class In> void create(In, In); // Q14
 
     // destroy the elements in the array and free the memory
     void uncreate();
@@ -97,6 +101,14 @@ template <class T> void Vec<T>::create(size_type n, const T& val)
 // code is taken from §11.5.1/207
 template <class T>
 void Vec<T>::create(const_iterator i, const_iterator j)
+{
+    data = alloc.allocate(j - i);
+    limit = avail = std::uninitialized_copy(i, j, data);
+}
+
+template <class T>
+template <class In>
+void Vec<T>::create(In i, In j)
 {
     data = alloc.allocate(j - i);
     limit = avail = std::uninitialized_copy(i, j, data);
@@ -179,5 +191,43 @@ typename Vec<T>::iterator Vec<T>::erase(iterator b, iterator e)
 
     // return the iterator pointing after the erased elements
     return ret;
+}
+
+template <class T>
+template <class In>
+typename Vec<T>::iterator Vec<T>::insert(iterator d, In b, In e)
+{
+    // save the tail and the difference
+    Vec<T> end(d, avail);
+    ptrdiff_t diff = d - data;
+
+    // destroy the tail
+    if (d) {
+        // destroy (in reverse order) the elements that were constructed
+        while (avail != d)
+            alloc.destroy(--avail);
+    }
+    
+    // insert the items
+    while (b != e)
+        push_back(*b++);
+
+    // add the tail
+    for (Vec<T>::const_iterator it = end.begin();
+         it != end.end(); ++it)
+        push_back(*it);
+
+    return data + diff;
+}
+
+template <class T>
+void Vec<T>::assign(iterator b, iterator e)
+{
+    // destroy the Vec
+    uncreate();
+
+    // push all the elements denoted by the iterators
+    while (b != e)
+        push_back(*b++);
 }
 #endif

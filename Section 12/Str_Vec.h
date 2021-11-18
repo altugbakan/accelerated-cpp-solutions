@@ -10,6 +10,8 @@ class Str {
 
 public:
     typedef Vec<char>::size_type size_type;
+    typedef char* iterator; // Q12
+    typedef const char* const_iterator; // Q12
 
     // default constructor; create an empty Str
     Str() { }
@@ -34,6 +36,14 @@ public:
         std::copy(s.data.begin(), s.data.end(),
                   std::back_inserter(data));
         return *this;
+    }
+
+    iterator begin() { return data.begin(); } // Q12
+    iterator end() { return data.end(); } // Q12
+
+    // Q12
+    iterator insert(iterator d, iterator b, iterator e) {
+        return data.insert(d, b, e);
     }
 
 private:
