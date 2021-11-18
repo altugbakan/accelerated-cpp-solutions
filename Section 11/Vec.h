@@ -42,8 +42,8 @@ public:
     const_iterator end() const { return avail; }
 
     void clear() { uncreate(); }
-    iterator erase (iterator);
-    iterator erase (iterator, iterator);
+    iterator erase(iterator);
+    iterator erase(iterator, iterator);
     bool empty() const { return data == avail; }
 
 private:
