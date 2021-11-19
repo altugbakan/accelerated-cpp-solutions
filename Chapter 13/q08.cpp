@@ -42,10 +42,10 @@ int main()
             string letter_grade = students[i].letter_grade();
             streamsize prec = cout.precision();
             cout << setprecision(3) << grade << '\t' << letter_grade
-                << setprecision(prec) << endl;
+                 << setprecision(prec) << endl;
         } catch (domain_error e) {
             cout << e.what() << endl;
-        }        
+        }
     }
 
     return 0;

@@ -11,13 +11,12 @@ using std::vector;
 using std::string;
 using std::min;
 
-// code is taken from §13.1.2/230
-string Core::name() const {
+string Core::name() const
+{
     // cerr << "Core::name()" << endl; // Q2
     return n;
 }
 
-// code is taken from §13.1.2/230
 double Core::grade() const
 {
     // cerr << "Core::grade()" << endl; // Q2
@@ -78,7 +77,6 @@ istream& Grad::read(istream& in)
     return in;
 }
 
-// code is taken from §13.1.2/230
 double Grad::grade() const
 {
     // cerr << "Grad::grade()" << endl; // Q2
