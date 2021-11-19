@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "../Section 05/split.h"
+#include "../Chapter 05/split.h"
 
 using std::map;
 using std::vector;
@@ -15,8 +15,8 @@ using std::istream;
 using std::find;
 
 // find all the lines that refer to each word in the input
-template <class Out>
-void xref(istream& in, Out os,
+map<string, vector<int> >
+    xref(istream& in,
     vector<string> find_words(const string&) = split)
 {
     string line;
@@ -36,29 +36,22 @@ void xref(istream& in, Out os,
              // push if it does not exist already
              if (find(ret[*it].begin(), ret[*it].end(), line_number)
                 == ret[*it].end())
-                ret[*it].push_back(line_number);
+                ret[*it].push_back(line_number);             
     }
-
-    // write results to output iterator
-    for (map<string, vector<int> >::const_iterator it = ret.begin();
-        it != ret.end(); ++it) {
-        *os = *it;
-    }
+    return ret;
 }
 
-// code is taken from §7.3/128
 int main()
 {
     // call xref using split by default
-    map<string, vector<int> > ret;
-    xref(cin, inserter(ret, ret.begin()));
+    map<string, vector<int> > ret = xref(cin);
 
     // write the results
     for (map<string, vector<int> >::const_iterator it = ret.begin();
         it != ret.end(); ++it) {
+        
         // write the word
-        cout << it->first << " occurs on line"
-            << (it->second.size() > 1 ? "s: " : ": ");
+        cout << it->first << " occurs on line(s): ";
 
         // followed by one or more line numbers
         vector<int>::const_iterator line_it = it->second.begin();
@@ -67,7 +60,13 @@ int main()
         ++line_it;
         // write the rest of the line numbers, if any
         while (line_it != it->second.end()) {
-            cout << ", " << *line_it;
+            cout << ", ";
+            
+            // break up the output line after 15 lines
+            if ((line_it - it->second.begin()) % 15 == 0) {
+                cout << endl;
+            }
+            cout << *line_it;
             ++line_it;
         }
         // write a new line to separate each word from the next

@@ -3,7 +3,8 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "../Section 05/split.h"
+#include "../Chapter 05/split.h"
+#include "../Chapter 06/find_urls.h"
 
 using std::map;
 using std::vector;
@@ -43,15 +44,16 @@ map<string, vector<int> >
 
 int main()
 {
-    // call xref using split by default
-    map<string, vector<int> > ret = xref(cin);
+    // call xref using find_urls
+    map<string, vector<int> > ret = xref(cin, find_urls);
 
     // write the results
     for (map<string, vector<int> >::const_iterator it = ret.begin();
         it != ret.end(); ++it) {
         
         // write the word
-        cout << it->first << " occurs on line(s): ";
+        cout << it->first << " occurs on line"
+             << (it->second.size() > 1 ? "s: " : ": ");
 
         // followed by one or more line numbers
         vector<int>::const_iterator line_it = it->second.begin();

@@ -3,7 +3,7 @@
 #include <map>
 #include <vector>
 #include <string>
-#include "../Section 05/split.h"
+#include "../Chapter 05/split.h"
 
 using std::istream;
 using std::cout;

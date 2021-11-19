@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Student_info.h"
-#include "../Section 04/grade.h"
+#include "../Chapter 04/grade.h"
 
 using std::cout;
 using std::endl;

@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "../Section 09/Student_info.h"
+#include "../Chapter 09/Student_info.h"
 
 using std::domain_error;
 using std::setprecision;

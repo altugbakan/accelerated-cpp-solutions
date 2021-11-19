@@ -16,13 +16,13 @@ The synthesized assignment operator copies the values of the `midterm`, `final`,
 Destructor destroys 4 members, `midterm`, `final`, `n`, an the entire `vector<double>`.
 
 ### Q5: Instrument the `Student_info` class to count how often objects are created, copied, assigned, and destroyed. Use this instrumented class to execute the student record programs from Chapter 6. Using the instrumented `Student_info` class will let you see how you estimate what proportion of the cost differences we saw are accounted for by the use of each library class. Do this instrumentation and analysis.
-The instrumented `Student_info` class can be found in [Student_info.cpp](./Student_info.cpp). When creating, copying, assigning, and destroying a class, the respective operation is printed to `cout`. The modified programs from Section 6 can be found in [q05-1.cpp](./q05-1.cpp), [q05-2.cpp](./q05-2.cpp), [q05-3.cpp](./q05-3.cpp), and [q05-4.cpp](./q05-4.cpp).
+The instrumented `Student_info` class can be found in [Student_info.cpp](./Student_info.cpp). When creating, copying, assigning, and destroying a class, the respective operation is printed to `cout`. The modified programs from Chapter 6 can be found in [q05-1.cpp](./q05-1.cpp), [q05-2.cpp](./q05-2.cpp), [q05-3.cpp](./q05-3.cpp), and [q05-4.cpp](./q05-4.cpp).
 
 ### Q6: Add an operation to remove an element from a `Vec` and another to empty the entire `Vec`. These should behave analogously to the `erase` and `clear` options on `vector`s.
 `erase` and `clear` functions were added to [Vec.h](./Vec.h).
 
 ### Q7: Once you've added `erase` and `clear` to `Vec`, you can use that class instead of `vector` in most of the earlier programs in this book. Rewrite the `Student_info` programs from Chapter 9 and the programs that work with character pictures from Chapter 5 to use `Vec`s instead of `vector`s.
-The rewritten programs from Section 6 can be found in [q07-1.cpp](./q07-1.cpp), [q07-2.cpp](./q07-2.cpp), [q07-3.cpp](./q07-3.cpp), [q07-4.cpp](./q07-4.cpp),
+The rewritten programs from Chapter 6 can be found in [q07-1.cpp](./q07-1.cpp), [q07-2.cpp](./q07-2.cpp), [q07-3.cpp](./q07-3.cpp), [q07-4.cpp](./q07-4.cpp),
 [q07-5.cpp](./q07-5.cpp), [q07-6.cpp](./q07-6.cpp), and [q07-7.cpp](./q07-7.cpp).
 
 ### Q8: Write a simplified version of the standard `list` class and its associated iterator.

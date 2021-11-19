@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "../Section 05/split.h"
+#include "../Chapter 05/split.h"
 
 using std::map;
 using std::vector;
@@ -41,6 +41,7 @@ map<string, vector<int> >
     return ret;
 }
 
+// code is taken from §7.3/128
 int main()
 {
     // call xref using split by default
@@ -49,10 +50,8 @@ int main()
     // write the results
     for (map<string, vector<int> >::const_iterator it = ret.begin();
         it != ret.end(); ++it) {
-        
         // write the word
-        cout << it->first << " occurs on line"
-             << (it->second.size() > 1 ? "s: " : ": ");
+        cout << it->first << " occurs on line(s): ";
 
         // followed by one or more line numbers
         vector<int>::const_iterator line_it = it->second.begin();
@@ -61,13 +60,7 @@ int main()
         ++line_it;
         // write the rest of the line numbers, if any
         while (line_it != it->second.end()) {
-            cout << ", ";
-            
-            // break up the output line after 15 lines
-            if ((line_it - it->second.begin()) % 15 == 0) {
-                cout << endl;
-            }
-            cout << *line_it;
+            cout << ", " << *line_it;
             ++line_it;
         }
         // write a new line to separate each word from the next

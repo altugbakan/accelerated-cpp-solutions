@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "Student_info_ex.h"
-#include "../Section 04/grade.h"
+#include "Student_info.h"
+#include "../Chapter 04/grade.h"
 
 using std::vector;
 using std::istream;
@@ -27,12 +27,18 @@ istream& read_hw(istream& in, vector<double>& hw)
     return in;
 }
 
+// code is taken from §9.2.1/157
 istream& Student_info::read(istream& in)
 {
     in >> n >> midterm >> final;
     read_hw(in, homework);
-    g = ::grade(midterm, final, homework);
     return in;
+}
+
+// code is taken from §9.3.1/158
+double Student_info::grade() const
+{
+    return ::grade(midterm, final, homework);
 }
 
 // code is taken from §9.3.1/162

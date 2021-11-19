@@ -3,8 +3,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "../Section 05/split.h"
-#include "../Section 06/find_urls.h"
+#include "../Chapter 05/split.h"
 
 using std::map;
 using std::vector;
@@ -44,8 +43,8 @@ map<string, vector<int> >
 
 int main()
 {
-    // call xref using find_urls
-    map<string, vector<int> > ret = xref(cin, find_urls);
+    // call xref using split by default
+    map<string, vector<int> > ret = xref(cin);
 
     // write the results
     for (map<string, vector<int> >::const_iterator it = ret.begin();

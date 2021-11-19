@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "../Section 04/Student_info.h"
+#include "../Chapter 04/Student_info.h"
 // ctime is used for code runtime estimation
 #include <ctime>
 
