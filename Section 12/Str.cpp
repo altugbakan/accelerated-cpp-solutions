@@ -39,6 +39,7 @@ istream& operator>>(istream& is, Str& s)
     return is;
 }
 
+// code is taken from §12.3.3/219
 Str operator+(const Str& s, const Str& t)
 {
     Str r = s;

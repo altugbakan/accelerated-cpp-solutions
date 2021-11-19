@@ -6,6 +6,7 @@
 using std::ostream;
 using std::istream;
 
+// code is taken from §12.3.1/216
 ostream& operator<<(ostream& os, const Str& s)
 {
     for (Str::size_type i = 0; i != s.size(); ++i)
@@ -13,6 +14,7 @@ ostream& operator<<(ostream& os, const Str& s)
     return os;
 }
 
+// code is taken from §12.3.2/216
 istream& operator>>(istream& is, Str& s)
 {
     // obliterate existing value(s)
@@ -36,6 +38,7 @@ istream& operator>>(istream& is, Str& s)
     return is;
 }
 
+// code is taken from §12.3.3/219
 Str operator+(const Str& s, const Str& t)
 {
     Str r = s;
