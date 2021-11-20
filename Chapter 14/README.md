@@ -18,3 +18,4 @@ The reimplemented `Str` class can be found in [Str.h](./Str.h).
 The driver function can be found in [q05.cpp](./q05.cpp).
 
 ### Q6: The `Ptr` class really solves two problems: maintaining reference counts, and allocating and deallocating objects. Define a class that does reference counting and nothing else; then use that class to implement the `Ptr` class.
+The reimplemented `Ptr` class can be found in [Ptr_Ctr.h](./Ptr_Ctr.h). The driver function can be found in [q06.cpp](./q06.cpp), which uses an `Str` class that uses the reimplemented `Ptr` class.
