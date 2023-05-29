@@ -40,7 +40,7 @@ This code outputs the numbers from 1 to 10. It increments `i` first and outputs 
 
 The code to count down from `10` to `-5` can be found in [q07.cpp](./q07.cpp).
 
-### Q8: Write a program to generate the product of the numbers in the range `[1, 10]`
+### Q8: Write a program to generate the product of the numbers in the range `[1, 10)`
 
 The code that generates the product of the numbers in the range `[1, 10)` can be found in [q08.cpp](./q08.cpp). The result is 362,880.
 
